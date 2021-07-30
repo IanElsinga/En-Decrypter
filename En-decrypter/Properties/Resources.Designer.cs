@@ -63,9 +63,9 @@ namespace En_decrypter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap no_background {
+        internal static System.Drawing.Bitmap fileIcon {
             get {
-                object obj = ResourceManager.GetObject("no background", resourceCulture);
+                object obj = ResourceManager.GetObject("fileIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

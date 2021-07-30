@@ -132,7 +132,6 @@ namespace en_decrypter
             // 
             // profilePic
             // 
-            this.profilePic.Image = global::En_decrypter.Properties.Resources.no_background;
             resources.ApplyResources(this.profilePic, "profilePic");
             this.profilePic.Name = "profilePic";
             this.profilePic.TabStop = false;

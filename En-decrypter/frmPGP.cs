@@ -189,5 +189,15 @@ namespace En_decrypter
                 btnSwitchKey.Text = "use private key";
             }
         }
+
+        private void btnCopyPlain_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(boxPlain.Text);
+        }
+
+        private void btnCopyEnc_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(boxPlain.Text);
+        }
     }
 }

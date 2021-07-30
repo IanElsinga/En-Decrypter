@@ -5,7 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>En_decrypter</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>no background.ico</ApplicationIcon>
+    <ApplicationIcon>fileIcon.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
     <PackageIcon>no background.png</PackageIcon>
     <AssemblyName>En-decrypter</AssemblyName>
@@ -72,13 +72,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\..\Pictures\Logo\J2\no background.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>

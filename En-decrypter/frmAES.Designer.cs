@@ -43,6 +43,8 @@ namespace En_decrypter
             this.checkDelFileAU = new System.Windows.Forms.CheckBox();
             this.btnFileDec = new System.Windows.Forms.Button();
             this.checkRandomFileName = new System.Windows.Forms.CheckBox();
+            this.btnCopy1 = new System.Windows.Forms.Button();
+            this.btnCopy2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // boxPlain
@@ -171,12 +173,40 @@ namespace En_decrypter
             this.checkRandomFileName.Text = "use random file name";
             this.checkRandomFileName.UseVisualStyleBackColor = true;
             // 
+            // btnCopy1
+            // 
+            this.btnCopy1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.btnCopy1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopy1.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCopy1.Location = new System.Drawing.Point(482, 277);
+            this.btnCopy1.Name = "btnCopy1";
+            this.btnCopy1.Size = new System.Drawing.Size(45, 31);
+            this.btnCopy1.TabIndex = 17;
+            this.btnCopy1.Text = "copy";
+            this.btnCopy1.UseVisualStyleBackColor = false;
+            this.btnCopy1.Click += new System.EventHandler(this.btnCopy1_Click);
+            // 
+            // btnCopy2
+            // 
+            this.btnCopy2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.btnCopy2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopy2.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCopy2.Location = new System.Drawing.Point(482, 435);
+            this.btnCopy2.Name = "btnCopy2";
+            this.btnCopy2.Size = new System.Drawing.Size(45, 31);
+            this.btnCopy2.TabIndex = 18;
+            this.btnCopy2.Text = "copy";
+            this.btnCopy2.UseVisualStyleBackColor = false;
+            this.btnCopy2.Click += new System.EventHandler(this.btnCopy2_Click);
+            // 
             // frmAES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(552, 487);
+            this.Controls.Add(this.btnCopy2);
+            this.Controls.Add(this.btnCopy1);
             this.Controls.Add(this.checkRandomFileName);
             this.Controls.Add(this.btnFileDec);
             this.Controls.Add(this.checkDelFileAU);
@@ -214,5 +244,7 @@ namespace En_decrypter
         private System.Windows.Forms.CheckBox checkDelFileAU;
         private System.Windows.Forms.Button btnFileDec;
         private System.Windows.Forms.CheckBox checkRandomFileName;
+        private System.Windows.Forms.Button btnCopy1;
+        private System.Windows.Forms.Button btnCopy2;
     }
 }

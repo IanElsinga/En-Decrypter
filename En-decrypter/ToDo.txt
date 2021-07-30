@@ -13,6 +13,7 @@ AES:
 	- file decryption: check if file was encrypted by this program, delete last line, secure delete
 
 PGP(https://blog.bitscry.com/2018/07/05/pgp-encryption-and-decryption-in-c/):
+	- fix Verify string output
 	- change buttons when changing text (Contains public...)
 	- file enc, decryption
 	- copy buttons
@@ -20,7 +21,7 @@ PGP(https://blog.bitscry.com/2018/07/05/pgp-encryption-and-decryption-in-c/):
 	- create Keypair?
 
 Settings:
-	- user login
+	- user login (useles admin: compare pass to hashed password, ...)
 	- profile pic selection
 	- settings file
 	- autologin
