@@ -121,7 +121,7 @@ namespace En_decrypter
             // lblResponse
             // 
             this.lblResponse.AutoSize = true;
-            this.lblResponse.Location = new System.Drawing.Point(22, 139);
+            this.lblResponse.Location = new System.Drawing.Point(22, 130);
             this.lblResponse.Name = "lblResponse";
             this.lblResponse.Size = new System.Drawing.Size(0, 15);
             this.lblResponse.TabIndex = 23;
@@ -169,7 +169,7 @@ namespace En_decrypter
             this.boxKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxKey.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxKey.Location = new System.Drawing.Point(22, 21);
-            this.boxKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.boxKey.Margin = new System.Windows.Forms.Padding(2);
             this.boxKey.Multiline = true;
             this.boxKey.Name = "boxKey";
             this.boxKey.Size = new System.Drawing.Size(200, 31);
@@ -201,7 +201,7 @@ namespace En_decrypter
             this.boxPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxPwd.Location = new System.Drawing.Point(22, 71);
-            this.boxPwd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.boxPwd.Margin = new System.Windows.Forms.Padding(2);
             this.boxPwd.Name = "boxPwd";
             this.boxPwd.Size = new System.Drawing.Size(201, 16);
             this.boxPwd.TabIndex = 32;

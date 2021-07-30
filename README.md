@@ -5,7 +5,7 @@
 
 - Password Generator
 - AES string and file Encryption and Decryption
-- PGP string Encryption, Signing, Decryption and Verifying
+- PGP string and file Encryption, Signing, Decryption and Verifying
 
 
 # **ToDo:**
@@ -17,18 +17,16 @@ Secure Delete:
 - everything
 
 AES:
-- copy buttons
 - (file encryption:) write filename encrypted to file
 - (file decryption:) check if file was encrypted by this program, delete last line, secure delete
-- copy to clipboard buttons
 - secure delete
+- (secure) delete file if something goes wrong
 
 PGP:
-- change buttons when changing text (Contains public...)
-- file enc, decryption
-- copy to clipboard buttons
+- fix verify file output
 - ?import Pwd Key File
 - ?create Keypair
+- (secure) delete file if something goes wrong
 
 Settings:
 - user login

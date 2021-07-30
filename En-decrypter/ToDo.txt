@@ -8,15 +8,12 @@ Secure Delete:
 	- everything
 
 AES:
-	- copy buttons
 	- file encryption: write filename encrypted to file, secure delete
 	- file decryption: check if file was encrypted by this program, delete last line, secure delete
 
 PGP(https://blog.bitscry.com/2018/07/05/pgp-encryption-and-decryption-in-c/):
 	- fix Verify string output
-	- change buttons when changing text (Contains public...)
 	- file enc, decryption
-	- copy buttons
 	- import Pwd Key File?
 	- create Keypair?
 
