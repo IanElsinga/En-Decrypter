@@ -199,5 +199,28 @@ namespace En_decrypter
         {
             Clipboard.SetText(boxPlain.Text);
         }
+
+        private void btnPasteEnc_Click(object sender, EventArgs e)
+        {
+            boxEnc.Text = Clipboard.GetText();
+        }
+
+        private void btnPastePlain_Click(object sender, EventArgs e)
+        {
+            boxPlain.Text = Clipboard.GetText();
+        }
+
+        private void btnPasteKey_Click(object sender, EventArgs e)
+        {
+            boxKey.Text = Clipboard.GetText();
+        }
+
+        private void boxKey_TextChanged(object sender, EventArgs e)
+        {
+            if (boxKey.Text.Contains("PUBLIC KEY") || boxKey.Text.Contains("PRIVATE KEY"))
+            {
+                btnSwitchKey_Click(this, null);
+            }
+        }
     }
 }

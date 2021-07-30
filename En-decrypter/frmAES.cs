@@ -313,5 +313,15 @@ namespace En_decrypter
         {
             Clipboard.SetText(boxEnc.Text);
         }
+
+        private void btnPastePlain_Click(object sender, EventArgs e)
+        {
+            boxPlain.Text = Clipboard.GetText();
+        }
+
+        private void button1_Click(object sender, EventArgs e) //btnPasteEnc
+        {
+            boxEnc.Text = Clipboard.GetText();
+        }
     }
 }

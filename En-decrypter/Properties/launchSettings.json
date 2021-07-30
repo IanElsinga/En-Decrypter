@@ -2,7 +2,7 @@
   "profiles": {
     "En-decrypter": {
       "commandName": "Executable",
-      "executablePath": "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\bin\\Debug\\net5.0-windows\\En-decrypter.exe"
+      "executablePath": "C:\\Users\\Jakob\\source\\repos\\En-Decrypter\\En-Decrypter\\bin\\Debug\\net5.0-windows\\En-decrypter.exe"
     }
   }
 }
