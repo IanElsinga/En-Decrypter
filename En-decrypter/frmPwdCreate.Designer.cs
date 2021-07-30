@@ -31,7 +31,6 @@ namespace En_decrypter
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPwdCreate));
             this.boxPwdCreate = new System.Windows.Forms.TextBox();
-            this.btnPwdCreate = new System.Windows.Forms.Button();
             this.boxPwdLength = new System.Windows.Forms.TextBox();
             this.lblResponse = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@ namespace En_decrypter
             this.checkSpecialChar = new System.Windows.Forms.CheckBox();
             this.btnPwdCopy = new System.Windows.Forms.Button();
             this.checkLowercase = new System.Windows.Forms.CheckBox();
+            this.btnPwdCreate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // boxPwdCreate
@@ -50,29 +50,19 @@ namespace En_decrypter
             this.boxPwdCreate.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.boxPwdCreate.Location = new System.Drawing.Point(50, 273);
             this.boxPwdCreate.Name = "boxPwdCreate";
-            this.boxPwdCreate.Size = new System.Drawing.Size(392, 23);
+            this.boxPwdCreate.Size = new System.Drawing.Size(405, 23);
             this.boxPwdCreate.TabIndex = 1;
-            // 
-            // btnPwdCreate
-            // 
-            this.btnPwdCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPwdCreate.Location = new System.Drawing.Point(51, 61);
-            this.btnPwdCreate.Name = "btnPwdCreate";
-            this.btnPwdCreate.Size = new System.Drawing.Size(98, 23);
-            this.btnPwdCreate.TabIndex = 2;
-            this.btnPwdCreate.Text = "new Password";
-            this.btnPwdCreate.UseVisualStyleBackColor = true;
-            this.btnPwdCreate.Click += new System.EventHandler(this.btnPwdCreate_Click);
             // 
             // boxPwdLength
             // 
             this.boxPwdLength.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
-            this.boxPwdLength.Location = new System.Drawing.Point(51, 99);
+            this.boxPwdLength.Location = new System.Drawing.Point(50, 99);
             this.boxPwdLength.Name = "boxPwdLength";
             this.boxPwdLength.Size = new System.Drawing.Size(49, 23);
             this.boxPwdLength.TabIndex = 3;
             this.boxPwdLength.Text = "20";
             this.boxPwdLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.boxPwdLength.TextChanged += new System.EventHandler(this.boxPwdLength_TextChanged);
             // 
             // lblResponse
             // 
@@ -101,6 +91,7 @@ namespace En_decrypter
             this.checkUppercase.TabIndex = 6;
             this.checkUppercase.Text = "use uppercase";
             this.checkUppercase.UseVisualStyleBackColor = true;
+            this.checkUppercase.CheckStateChanged += new System.EventHandler(this.checkUppercase_CheckStateChanged);
             // 
             // checkNumbers
             // 
@@ -113,6 +104,7 @@ namespace En_decrypter
             this.checkNumbers.TabIndex = 7;
             this.checkNumbers.Text = "use numbers";
             this.checkNumbers.UseVisualStyleBackColor = true;
+            this.checkNumbers.CheckStateChanged += new System.EventHandler(this.checkNumbers_CheckStateChanged);
             // 
             // checkSpecialChar
             // 
@@ -125,17 +117,20 @@ namespace En_decrypter
             this.checkSpecialChar.TabIndex = 8;
             this.checkSpecialChar.Text = "use special characters";
             this.checkSpecialChar.UseVisualStyleBackColor = true;
+            this.checkSpecialChar.CheckStateChanged += new System.EventHandler(this.checkSpecialChar_CheckStateChanged);
             // 
             // btnPwdCopy
             // 
+            this.btnPwdCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.btnPwdCopy.FlatAppearance.BorderSize = 0;
             this.btnPwdCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPwdCopy.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPwdCopy.Location = new System.Drawing.Point(448, 273);
+            this.btnPwdCopy.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPwdCopy.Location = new System.Drawing.Point(449, 273);
             this.btnPwdCopy.Name = "btnPwdCopy";
-            this.btnPwdCopy.Size = new System.Drawing.Size(76, 23);
+            this.btnPwdCopy.Size = new System.Drawing.Size(52, 23);
             this.btnPwdCopy.TabIndex = 9;
             this.btnPwdCopy.Text = "copy";
-            this.btnPwdCopy.UseVisualStyleBackColor = true;
+            this.btnPwdCopy.UseVisualStyleBackColor = false;
             this.btnPwdCopy.Click += new System.EventHandler(this.btnPwdCopy_Click);
             // 
             // checkLowercase
@@ -149,13 +144,27 @@ namespace En_decrypter
             this.checkLowercase.TabIndex = 13;
             this.checkLowercase.Text = "use lowercase";
             this.checkLowercase.UseVisualStyleBackColor = true;
+            this.checkLowercase.CheckStateChanged += new System.EventHandler(this.checkLowercase_CheckStateChanged);
+            // 
+            // btnPwdCreate
+            // 
+            this.btnPwdCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
+            this.btnPwdCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPwdCreate.Location = new System.Drawing.Point(50, 65);
+            this.btnPwdCreate.Name = "btnPwdCreate";
+            this.btnPwdCreate.Size = new System.Drawing.Size(101, 28);
+            this.btnPwdCreate.TabIndex = 14;
+            this.btnPwdCreate.Text = "new Password";
+            this.btnPwdCreate.UseVisualStyleBackColor = false;
+            this.btnPwdCreate.Click += new System.EventHandler(this.btnPwdCreate_Click);
             // 
             // frmPwdCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(552, 487);
+            this.ClientSize = new System.Drawing.Size(553, 487);
+            this.Controls.Add(this.btnPwdCreate);
             this.Controls.Add(this.checkLowercase);
             this.Controls.Add(this.btnPwdCopy);
             this.Controls.Add(this.checkSpecialChar);
@@ -164,7 +173,6 @@ namespace En_decrypter
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblResponse);
             this.Controls.Add(this.boxPwdLength);
-            this.Controls.Add(this.btnPwdCreate);
             this.Controls.Add(this.boxPwdCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -179,7 +187,6 @@ namespace En_decrypter
         #endregion
 
         private System.Windows.Forms.TextBox boxPwdCreate;
-        private System.Windows.Forms.Button btnPwdCreate;
         private System.Windows.Forms.TextBox boxPwdLength;
         private System.Windows.Forms.Label lblResoponse;
         private System.Windows.Forms.Label lblResponse;
@@ -189,5 +196,6 @@ namespace En_decrypter
         private System.Windows.Forms.CheckBox checkSpecialChar;
         private System.Windows.Forms.Button btnPwdCopy;
         private System.Windows.Forms.CheckBox checkLowercase;
+        private System.Windows.Forms.Button btnPwdCreate;
     }
 }

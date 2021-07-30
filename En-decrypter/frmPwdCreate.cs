@@ -26,7 +26,7 @@ namespace En_decrypter
             {
                 pwdLength = Convert.ToInt16(boxPwdLength.Text);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 lblResponse.Text = "The Passwordlength must be a number!";
                 lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
@@ -72,6 +72,30 @@ namespace En_decrypter
             Clipboard.SetText(boxPwdCreate.Text);
         }
 
+        private void boxPwdLength_TextChanged(object sender, EventArgs e)
+        {
+            btnPwdCreate_Click(this, null);
+        }
+
+        private void checkLowercase_CheckStateChanged(object sender, EventArgs e)
+        {
+            btnPwdCreate_Click(this, null);
+        }
+
+        private void checkUppercase_CheckStateChanged(object sender, EventArgs e)
+        {
+            btnPwdCreate_Click(this, null);
+        }
+
+        private void checkNumbers_CheckStateChanged(object sender, EventArgs e)
+        {
+            btnPwdCreate_Click(this, null);
+        }
+
+        private void checkSpecialChar_CheckStateChanged(object sender, EventArgs e)
+        {
+            btnPwdCreate_Click(this, null);
+        }
         private void frmPwdCreate_Load(object sender, EventArgs e)
         {
 

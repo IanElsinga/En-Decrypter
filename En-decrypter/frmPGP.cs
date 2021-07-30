@@ -217,7 +217,11 @@ namespace En_decrypter
 
         private void boxKey_TextChanged(object sender, EventArgs e)
         {
-            if (boxKey.Text.Contains("PUBLIC KEY") || boxKey.Text.Contains("PRIVATE KEY"))
+            if (boxKey.Text.Contains("PUBLIC KEY") && !isPublicKey)
+            {
+                btnSwitchKey_Click(this, null);
+            }
+            else if (boxKey.Text.Contains("PRIVATE KEY") && isPublicKey)
             {
                 btnSwitchKey_Click(this, null);
             }
