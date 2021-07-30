@@ -1,0 +1,28 @@
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.csprojAssemblyReference.cache
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.csproj.GenerateResource.cache
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.GeneratedMSBuildEditorConfig.editorconfig
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.AssemblyInfoInputs.cache
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.AssemblyInfo.cs
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.csproj.CoreCompileInputs.cache
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.genruntimeconfig.cache
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\BouncyCastle.OpenPgp.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\en_decrypter.Form1.resources
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\en_decrypter.Form1.es-BZ.resources
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\en_decrypter.Form1.fo-DK.resources
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\PGP en-decrypter.csproj.CopyComplete
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\En_decrypter.Properties.Resources.resources
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\En-decrypter.exe
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\En-decrypter.deps.json
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\En-decrypter.runtimeconfig.json
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\En-decrypter.runtimeconfig.dev.json
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\En-decrypter.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\ref\En-decrypter.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\En-decrypter.pdb
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\es-BZ\En-decrypter.resources.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\bin\Debug\net5.0-windows\fo-DK\En-decrypter.resources.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\es-BZ\En-decrypter.resources.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\fo-DK\En-decrypter.resources.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\En-decrypter.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\ref\En-decrypter.dll
+A:\Programming\repos\PGP en-decrypter\PGP en-decrypter\obj\Debug\net5.0-windows\En-decrypter.pdb

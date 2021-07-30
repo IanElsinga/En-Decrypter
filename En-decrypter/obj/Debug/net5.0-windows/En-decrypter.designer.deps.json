@@ -1,0 +1,76 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BouncyCastle/1.8.9": {
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.9.0",
+            "fileVersion": "1.8.20343.1"
+          }
+        }
+      },
+      "BouncyCastle.OpenPgp/1.8.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.OpenPgp.dll": {
+            "assemblyVersion": "1.8.1.0",
+            "fileVersion": "1.8.15362.1"
+          }
+        }
+      },
+      "PgpCore/5.2.0": {
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.10"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PgpCore.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.0.0"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.10": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.10.0",
+            "fileVersion": "1.8.10.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
+      "path": "bouncycastle/1.8.9",
+      "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
+    },
+    "BouncyCastle.OpenPgp/1.8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hHuFuQRbaKErKrIlIQnS+BIbCJfFUinhh0TiEuo9xgJ1ZoYXz1L4I2geGhVX6fqI0JaNjOcCVi0OITpu67kVRg==",
+      "path": "bouncycastle.openpgp/1.8.1.1",
+      "hashPath": "bouncycastle.openpgp.1.8.1.1.nupkg.sha512"
+    },
+    "PgpCore/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NWuMzPQusUOB5dQYmPDUsVaFOhQ/D8DNDBH1m83qvAJvB2zPNi57vk/jjT0f3h2yFYoi3b66zrqPyUFZfta4yA==",
+      "path": "pgpcore/5.2.0",
+      "hashPath": "pgpcore.5.2.0.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.8.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XLhjNAwuVB9ynwn11l5K44eyozh8q6gFseTrlnLNttejimglX7+F9+vxh60LPjvA/DAt6fUdS43N3ah8K6eaWg==",
+      "path": "portable.bouncycastle/1.8.10",
+      "hashPath": "portable.bouncycastle.1.8.10.nupkg.sha512"
+    }
+  }
+}

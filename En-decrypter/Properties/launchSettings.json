@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "En-decrypter": {
+      "commandName": "Executable",
+      "executablePath": "A:\\Programming\\repos\\En-decrypter\\En-decrypter\\bin\\Debug\\net5.0-windows\\En-decrypter.exe"
+    }
+  }
+}
