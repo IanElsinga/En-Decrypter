@@ -42,7 +42,6 @@ namespace En_decrypter
             this.lblPlainTxt = new System.Windows.Forms.Label();
             this.boxPlain = new System.Windows.Forms.TextBox();
             this.boxKey = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.boxPwd = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -52,6 +51,7 @@ namespace En_decrypter
             this.btnPastePlain = new System.Windows.Forms.Button();
             this.btnPasteEnc = new System.Windows.Forms.Button();
             this.btnPasteKey = new System.Windows.Forms.Button();
+            this.btnKeyFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkRandomFileName
@@ -168,23 +168,13 @@ namespace En_decrypter
             // 
             this.boxKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxKey.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.boxKey.Location = new System.Drawing.Point(22, 21);
+            this.boxKey.Location = new System.Drawing.Point(22, 26);
             this.boxKey.Margin = new System.Windows.Forms.Padding(2);
             this.boxKey.Multiline = true;
             this.boxKey.Name = "boxKey";
-            this.boxKey.Size = new System.Drawing.Size(200, 31);
+            this.boxKey.Size = new System.Drawing.Size(200, 26);
             this.boxKey.TabIndex = 30;
             this.boxKey.TextChanged += new System.EventHandler(this.boxKey_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 4);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 15);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Key";
             // 
             // label2
             // 
@@ -279,13 +269,26 @@ namespace En_decrypter
             this.btnPasteKey.FlatAppearance.BorderSize = 0;
             this.btnPasteKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPasteKey.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPasteKey.Location = new System.Drawing.Point(175, 21);
+            this.btnPasteKey.Location = new System.Drawing.Point(175, 26);
             this.btnPasteKey.Name = "btnPasteKey";
-            this.btnPasteKey.Size = new System.Drawing.Size(47, 31);
+            this.btnPasteKey.Size = new System.Drawing.Size(47, 26);
             this.btnPasteKey.TabIndex = 39;
             this.btnPasteKey.Text = "paste";
             this.btnPasteKey.UseVisualStyleBackColor = false;
             this.btnPasteKey.Click += new System.EventHandler(this.btnPasteKey_Click);
+            // 
+            // btnKeyFile
+            // 
+            this.btnKeyFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
+            this.btnKeyFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKeyFile.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnKeyFile.Location = new System.Drawing.Point(22, 3);
+            this.btnKeyFile.Name = "btnKeyFile";
+            this.btnKeyFile.Size = new System.Drawing.Size(87, 23);
+            this.btnKeyFile.TabIndex = 40;
+            this.btnKeyFile.Text = "Key";
+            this.btnKeyFile.UseVisualStyleBackColor = false;
+            this.btnKeyFile.Click += new System.EventHandler(this.btnKeyFile_Click);
             // 
             // frmPGP
             // 
@@ -293,6 +296,7 @@ namespace En_decrypter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(552, 487);
+            this.Controls.Add(this.btnKeyFile);
             this.Controls.Add(this.btnPasteKey);
             this.Controls.Add(this.btnPasteEnc);
             this.Controls.Add(this.btnPastePlain);
@@ -301,7 +305,6 @@ namespace En_decrypter
             this.Controls.Add(this.btnSwitchKey);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.boxPwd);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.boxKey);
             this.Controls.Add(this.checkRandomFileName);
             this.Controls.Add(this.btnFileDec);
@@ -337,7 +340,6 @@ namespace En_decrypter
         private System.Windows.Forms.Label lblPlainTxt;
         private System.Windows.Forms.TextBox boxPlain;
         private System.Windows.Forms.TextBox boxKey;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox boxPwd;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -347,5 +349,6 @@ namespace En_decrypter
         private System.Windows.Forms.Button btnPastePlain;
         private System.Windows.Forms.Button btnPasteEnc;
         private System.Windows.Forms.Button btnPasteKey;
+        private System.Windows.Forms.Button btnKeyFile;
     }
 }

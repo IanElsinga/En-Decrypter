@@ -59,6 +59,10 @@
             "Portable.BouncyCastle": {
               "target": "Package",
               "version": "[1.8.10, )"
+            },
+            "securedelete-net": {
+              "target": "Package",
+              "version": "[0.2.1, )"
             }
           },
           "imports": [

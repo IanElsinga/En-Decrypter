@@ -1,0 +1,13 @@
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\En-decrypter.exe
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\En-decrypter.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\En-decrypter.deps.json
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\En-decrypter.runtimeconfig.json
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\En-decrypter.pdb
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\es-BZ\En-decrypter.resources.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\fo-DK\En-decrypter.resources.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\BouncyCastle.OpenPgp.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\DiskDetector.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\Helper.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\PgpCore.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\BouncyCastle.Crypto.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\SecureDelete.dll

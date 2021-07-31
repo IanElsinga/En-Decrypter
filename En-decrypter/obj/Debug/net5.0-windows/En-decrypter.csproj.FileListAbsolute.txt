@@ -44,7 +44,6 @@ C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\BouncyCastle.OpenPgp.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\PgpCore.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
-C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\En-decrypter.csprojAssemblyReference.cache
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\en_decrypter.Form1.resources
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\En_decrypter.frmAES.resources
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\En_decrypter.frmPGP.resources
@@ -100,3 +99,6 @@ C:\Users\Jakob\source\repos\En-Decrypter\En-decrypter\obj\Debug\net5.0-windows\E
 C:\Users\Jakob\source\repos\En-Decrypter\En-decrypter\obj\Debug\net5.0-windows\ref\En-decrypter.dll
 C:\Users\Jakob\source\repos\En-Decrypter\En-decrypter\obj\Debug\net5.0-windows\En-decrypter.pdb
 C:\Users\Jakob\source\repos\En-Decrypter\En-decrypter\obj\Debug\net5.0-windows\En-decrypter.genruntimeconfig.cache
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\DiskDetector.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\Helper.dll
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\SecureDelete.dll

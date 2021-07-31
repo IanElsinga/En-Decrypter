@@ -30,7 +30,18 @@ namespace En_decrypter
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSecDel));
+            this.btnDelAsk = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnDelAsk
+            // 
+            this.btnDelAsk.Location = new System.Drawing.Point(215, 437);
+            this.btnDelAsk.Name = "btnDelAsk";
+            this.btnDelAsk.Size = new System.Drawing.Size(75, 23);
+            this.btnDelAsk.TabIndex = 0;
+            this.btnDelAsk.Text = "button1";
+            this.btnDelAsk.UseVisualStyleBackColor = true;
+            this.btnDelAsk.Click += new System.EventHandler(this.btnDelAsk_Click);
             // 
             // FrmSecDel
             // 
@@ -38,6 +49,7 @@ namespace En_decrypter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(552, 487);
+            this.Controls.Add(this.btnDelAsk);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSecDel";
@@ -47,5 +59,7 @@ namespace En_decrypter
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnDelAsk;
     }
 }

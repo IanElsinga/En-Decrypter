@@ -16,6 +16,10 @@ Start:
 Secure Delete:
 - everything
 
+Hashing algorithms:
+- dropdown menu
+- textbox and button to switch strings and files
+
 AES:
 - (file encryption:) write filename encrypted to file
 - (file decryption:) check if file was encrypted by this program, delete last line, secure delete
@@ -23,8 +27,7 @@ AES:
 - (secure) delete file if something goes wrong
 
 PGP:
-- fix verify file output
-- ?import Pwd Key File
+- fix verified file output
 - ?create Keypair
 - (secure) delete file if something goes wrong
 

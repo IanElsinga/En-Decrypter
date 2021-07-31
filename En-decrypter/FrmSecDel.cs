@@ -16,5 +16,23 @@ namespace En_decrypter
         {
             InitializeComponent();
         }
+
+        private void btnDelAsk_Click(object sender, EventArgs e)
+        {
+
+
+            /*
+             * using SecureDelete;
+
+
+            Delete.DeleteDirectory(new DirectoryInfo(@"F:\MyFolderOnHdd"), true);
+
+            Delete.DeleteDirectoryWithoutDriveDetection(new DirectoryInfo(@"F:\MyFolderOnHdd"), true);
+
+            Delete.DeleteFile(@"F:\aFile.jpg");
+
+            Delete.DeleteFileWithoutDriveDetection(@"F:\aFile.jpg");
+            */
+        }
     }
 }

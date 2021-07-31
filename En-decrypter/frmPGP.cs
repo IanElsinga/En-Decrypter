@@ -542,5 +542,34 @@ namespace En_decrypter
                 btnSwitchKey_Click(this, null);
             }
         }
+
+        private void btnKeyFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OpenFileDialog file = new OpenFileDialog())
+                {
+                    if (file.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var streamReader = new StreamReader(file.FileName, Encoding.ASCII))
+                        {
+                            boxKey.Text = streamReader.ReadToEnd();
+                        }
+                    }
+                    else
+                    {
+                        lblResponse.Text = "You have to select a file!";
+                        lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                        return;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lblResponse.Text = "The selected file is invalid!";
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                return;
+            }
+        }
     }
 }
