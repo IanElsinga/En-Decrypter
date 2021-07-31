@@ -102,3 +102,4 @@ C:\Users\Jakob\source\repos\En-Decrypter\En-decrypter\obj\Debug\net5.0-windows\E
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\DiskDetector.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\Helper.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\SecureDelete.dll
+c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\En-decrypter.csprojAssemblyReference.cache

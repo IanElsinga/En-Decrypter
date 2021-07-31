@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "En-decrypter/1.0.0": {
+      "En-decrypter/0.7": {
         "dependencies": {
           "BouncyCastle": "1.8.9",
           "BouncyCastle.OpenPgp": "1.8.1.1",
@@ -236,7 +236,7 @@
     }
   },
   "libraries": {
-    "En-decrypter/1.0.0": {
+    "En-decrypter/0.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

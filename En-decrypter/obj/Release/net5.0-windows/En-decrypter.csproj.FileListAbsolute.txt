@@ -34,3 +34,4 @@ C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-window
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\ref\En-decrypter.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\En-decrypter.pdb
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\En-decrypter.genruntimeconfig.cache
+c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\En-decrypter.csprojAssemblyReference.cache

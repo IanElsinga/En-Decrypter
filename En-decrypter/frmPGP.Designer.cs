@@ -142,6 +142,7 @@ namespace En_decrypter
             this.boxEnc.Location = new System.Drawing.Point(22, 337);
             this.boxEnc.Multiline = true;
             this.boxEnc.Name = "boxEnc";
+            this.boxEnc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxEnc.Size = new System.Drawing.Size(504, 127);
             this.boxEnc.TabIndex = 19;
             // 
@@ -161,6 +162,7 @@ namespace En_decrypter
             this.boxPlain.Location = new System.Drawing.Point(22, 179);
             this.boxPlain.Multiline = true;
             this.boxPlain.Name = "boxPlain";
+            this.boxPlain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxPlain.Size = new System.Drawing.Size(504, 127);
             this.boxPlain.TabIndex = 17;
             // 
@@ -213,7 +215,7 @@ namespace En_decrypter
             this.btnCopyPlain.FlatAppearance.BorderSize = 0;
             this.btnCopyPlain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopyPlain.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCopyPlain.Location = new System.Drawing.Point(481, 275);
+            this.btnCopyPlain.Location = new System.Drawing.Point(464, 275);
             this.btnCopyPlain.Name = "btnCopyPlain";
             this.btnCopyPlain.Size = new System.Drawing.Size(45, 31);
             this.btnCopyPlain.TabIndex = 35;
@@ -227,7 +229,7 @@ namespace En_decrypter
             this.btnCopyEnc.FlatAppearance.BorderSize = 0;
             this.btnCopyEnc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopyEnc.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCopyEnc.Location = new System.Drawing.Point(481, 433);
+            this.btnCopyEnc.Location = new System.Drawing.Point(464, 433);
             this.btnCopyEnc.Name = "btnCopyEnc";
             this.btnCopyEnc.Size = new System.Drawing.Size(45, 31);
             this.btnCopyEnc.TabIndex = 36;
@@ -241,7 +243,7 @@ namespace En_decrypter
             this.btnPastePlain.FlatAppearance.BorderSize = 0;
             this.btnPastePlain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPastePlain.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPastePlain.Location = new System.Drawing.Point(481, 179);
+            this.btnPastePlain.Location = new System.Drawing.Point(464, 179);
             this.btnPastePlain.Name = "btnPastePlain";
             this.btnPastePlain.Size = new System.Drawing.Size(45, 31);
             this.btnPastePlain.TabIndex = 37;
@@ -255,7 +257,7 @@ namespace En_decrypter
             this.btnPasteEnc.FlatAppearance.BorderSize = 0;
             this.btnPasteEnc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPasteEnc.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPasteEnc.Location = new System.Drawing.Point(481, 337);
+            this.btnPasteEnc.Location = new System.Drawing.Point(464, 337);
             this.btnPasteEnc.Name = "btnPasteEnc";
             this.btnPasteEnc.Size = new System.Drawing.Size(45, 31);
             this.btnPasteEnc.TabIndex = 38;

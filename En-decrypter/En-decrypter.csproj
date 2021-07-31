@@ -7,8 +7,13 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>fileIcon.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
-    <PackageIcon>no background.png</PackageIcon>
+    <PackageIcon></PackageIcon>
     <AssemblyName>En-decrypter</AssemblyName>
+    <StartupObject>en_decrypter.Program</StartupObject>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.7</Version>
+    <Copyright>jalupa</Copyright>
+    <NeutralLanguage>ru</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -51,10 +56,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="NewFile1.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -87,6 +88,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

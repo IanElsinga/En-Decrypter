@@ -1,0 +1,2 @@
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\En-decrypter.pdb
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\publish\En-decrypter.exe

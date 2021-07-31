@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oEdSjIqBulP0LLuiYQYEiHZpTOdYCCyl8vah49ykSVcFCX0OMgGzIodV5FoUsOQu+6DUyEqLquctarF5bBEigA==",
+  "dgSpecHash": "DOdugCyL2Ban4ClVHt7WMisommm3odwre8Bj6X2PfQEtsUYAew9G4mRWyHIc23fj9bNpd3ny09z9NW0TzFOfQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
+  "projectFilePath": "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jalupa\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\bouncycastle.openpgp\\1.8.1.1\\bouncycastle.openpgp.1.8.1.1.nupkg.sha512",

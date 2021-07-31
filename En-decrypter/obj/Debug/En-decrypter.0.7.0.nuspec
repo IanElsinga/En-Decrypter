@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>En-decrypter</id>
+    <version>0.7.0</version>
+    <authors>En-decrypter</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <copyright>jalupa</copyright>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0">
+        <dependency id="BouncyCastle" version="1.8.9" exclude="Build,Analyzers" />
+        <dependency id="BouncyCastle.OpenPGP" version="1.8.1.1" exclude="Build,Analyzers" />
+        <dependency id="PgpCore" version="5.2.0" exclude="Build,Analyzers" />
+        <dependency id="Portable.BouncyCastle" version="1.8.10" exclude="Build,Analyzers" />
+        <dependency id="securedelete-net" version="0.2.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\es-BZ\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\es-BZ\En-decrypter.resources.dll" />
+    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\fo-DK\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\fo-DK\En-decrypter.resources.dll" />
+    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\En-decrypter.runtimeconfig.json" target="lib\net5.0-windows7.0\En-decrypter.runtimeconfig.json" />
+    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\En-decrypter.dll" target="lib\net5.0-windows7.0\En-decrypter.dll" />
+  </files>
+</package>
