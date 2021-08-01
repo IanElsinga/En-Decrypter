@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,22 +18,87 @@ namespace En_decrypter
             InitializeComponent();
         }
 
+        public string SecDelFile(String input)
+        {
+            string response = input + " has been deleted successfully!";
+
+            /* Timeout/ pause program
+            var task = Task.Run(() => SecDelFile(""));
+            task.Wait(TimeSpan.FromSeconds(2));
+            */
+            try
+            {
+                FileAttributes attr = File.GetAttributes(input);
+
+                if (attr.HasFlag(FileAttributes.Directory))
+                    response = input + "is a dir";
+                else if (File.Exists(input))
+                    response = input + " is a file";
+                else
+                    response = "error: " + input + " is an invalid input!";
+            }
+            catch (Exception)
+            {
+                response = "error: " + input + " is an invalid input!";
+            }
+            return response;
+        }
+
         private void btnDelAsk_Click(object sender, EventArgs e)
         {
+            boxResponse.Clear();
+            if (boxInput.Text == "")
+            {
+                boxResponse.SelectionColor = true ? Color.Red : Color.Red;
+                boxResponse.AppendText("The files shouldn't be empty");
+            }
 
+            string[] array = boxInput.Text.Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            string response = "";
+            string successfulMsgs = "";
+            string errorMsgs = "";
 
-            /*
-             * using SecureDelete;
+            boxInput.Clear();
 
+            foreach (String item in array)
+            {
+                response = SecDelFile(item);
+                if (response.Contains("success"))
+                {
+                    boxResponse.SelectionColor = true ? Color.Green : Color.Green;
+                    successfulMsgs = successfulMsgs + response + "\n";
+                    boxResponse.SelectionColor = true ? Color.Green : Color.Green;
+                    boxResponse.AppendText(response + "\n");
+                }
+                else
+                {
+                    boxResponse.SelectionColor = true ? Color.Red : Color.Red;
+                    errorMsgs = errorMsgs + "\n" + response;
+                    boxResponse.SelectionColor = true ? Color.Red : Color.Red;
+                    boxResponse.AppendText(response + "\n");
+                    boxInput.AppendText(item + Environment.NewLine);
+                }
+            }
 
-            Delete.DeleteDirectory(new DirectoryInfo(@"F:\MyFolderOnHdd"), true);
+            boxResponse.Clear();
+            if (successfulMsgs != "")
+            {
+                boxResponse.SelectionColor = true ? Color.Green : Color.Green;
+                boxResponse.AppendText(successfulMsgs);
+            }
+            if (errorMsgs != "")
+            {
+                boxResponse.SelectionColor = true ? Color.Red : Color.Red;
+                boxResponse.AppendText(errorMsgs);
+            }
 
-            Delete.DeleteDirectoryWithoutDriveDetection(new DirectoryInfo(@"F:\MyFolderOnHdd"), true);
-
-            Delete.DeleteFile(@"F:\aFile.jpg");
-
-            Delete.DeleteFileWithoutDriveDetection(@"F:\aFile.jpg");
-            */
+            //Scroll to end of Response box when finished
+            try
+            {
+                boxResponse.Select(boxResponse.Text.Length - 1, boxResponse.Text.Length - 1);
+                boxResponse.ScrollToCaret();
+            }
+            catch (Exception) { }
         }
 
         private void boxInput_DragDrop(object sender, DragEventArgs e)
@@ -42,10 +108,12 @@ namespace En_decrypter
             {
                 for (int i = 0; i < files.Length; i++)
                 {
-
                     boxInput.Text = boxInput.Text + Environment.NewLine + files[i];
                 }
             }
+            boxInput.Select(boxInput.Text.Length - 1, boxInput.Text.Length - 1);
+            boxInput.ScrollToCaret();
+            
         }
 
         private void boxInput_DragEnter(object sender, DragEventArgs e)
@@ -54,6 +122,12 @@ namespace En_decrypter
                 e.Effect = DragDropEffects.Copy;
             else
                 e.Effect = DragDropEffects.None;
+        }
+
+        private void boxInput_TextChanged(object sender, EventArgs e)
+        {
+            boxInput.Text = boxInput.Text.TrimStart();
+            boxInput.Text = boxInput.Text.Replace("\r\n\r\n", "\r\n");
         }
     }
 }

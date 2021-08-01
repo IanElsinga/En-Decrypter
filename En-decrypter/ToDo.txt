@@ -5,7 +5,7 @@ Start:
 PwdGen:
 	
 Secure Delete:
-	- everything
+	- remove only successfully removed files out of text input
 
 AES:
 	- file encryption: write filename encrypted to file, secure delete
@@ -14,7 +14,6 @@ AES:
 PGP(https://blog.bitscry.com/2018/07/05/pgp-encryption-and-decryption-in-c/):
 	- fix Verify string output
 	- file enc, decryption
-	- import Pwd Key File?
 	- create Keypair?
 
 Settings:

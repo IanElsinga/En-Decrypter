@@ -14,7 +14,7 @@ Start:
 - everything
 
 Secure Delete:
-- everything
+- remove only successfully removed files from text input
 
 Hashing algorithms:
 - dropdown menu
@@ -23,12 +23,14 @@ Hashing algorithms:
 AES:
 - (file encryption:) write filename encrypted to file
 - (file decryption:) check if file was encrypted by this program, delete last line, secure delete
-- secure delete
+- secure delete file after use
 - (secure) delete file if something goes wrong
+- add drag and drop
 
 PGP:
 - fix verified file output
 - ?create Keypair
+- secure delete file after use
 - (secure) delete file if something goes wrong
 
 Settings:
