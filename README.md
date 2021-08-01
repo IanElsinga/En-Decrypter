@@ -4,6 +4,7 @@
 # **Features:**
 
 - Password Generator
+- Secure Delete files and folders
 - AES string and file Encryption and Decryption
 - PGP string and file Encryption, Signing, Decryption and Verifying
 
@@ -14,7 +15,9 @@ Start:
 - everything
 
 Secure Delete:
-- remove only successfully removed files from text input
+- change Security Question window
+- add start as admin when needed
+- fix drag and drop not working when started as administrator
 
 Hashing algorithms:
 - dropdown menu

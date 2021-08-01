@@ -23,9 +23,9 @@
     </frameworkReferences>
   </metadata>
   <files>
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\es-BZ\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\es-BZ\En-decrypter.resources.dll" />
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\fo-DK\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\fo-DK\En-decrypter.resources.dll" />
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\En-decrypter.runtimeconfig.json" target="lib\net5.0-windows7.0\En-decrypter.runtimeconfig.json" />
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\En-decrypter.dll" target="lib\net5.0-windows7.0\En-decrypter.dll" />
+    <file src="C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\win-x64\es-BZ\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\es-BZ\En-decrypter.resources.dll" />
+    <file src="C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Release\net5.0-windows\win-x64\fo-DK\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\fo-DK\En-decrypter.resources.dll" />
+    <file src="C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\win-x64\En-decrypter.runtimeconfig.json" target="lib\net5.0-windows7.0\En-decrypter.runtimeconfig.json" />
+    <file src="C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Release\net5.0-windows\win-x64\En-decrypter.dll" target="lib\net5.0-windows7.0\En-decrypter.dll" />
   </files>
 </package>

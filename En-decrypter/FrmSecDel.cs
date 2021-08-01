@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SecureDelete;
 
 namespace En_decrypter
 {
@@ -26,14 +27,29 @@ namespace En_decrypter
             var task = Task.Run(() => SecDelFile(""));
             task.Wait(TimeSpan.FromSeconds(2));
             */
+
             try
             {
                 FileAttributes attr = File.GetAttributes(input);
 
                 if (attr.HasFlag(FileAttributes.Directory))
-                    response = input + "is a dir";
+                    try
+                    {
+                        Delete.DeleteDirectoryWithoutDriveDetection(new DirectoryInfo(input), true);
+                    }
+                    catch (Exception)
+                    {
+                        response = "error: insufficient permissions processing " + input;
+                    }
                 else if (File.Exists(input))
-                    response = input + " is a file";
+                    try
+                    {
+                        Delete.DeleteFileWithoutDriveDetection(new FileInfo(input));
+                    }
+                    catch (Exception)
+                    {
+                        response = "error: insufficient permissions processing " + input;
+                    }
                 else
                     response = "error: " + input + " is an invalid input!";
             }
@@ -42,6 +58,7 @@ namespace En_decrypter
                 response = "error: " + input + " is an invalid input!";
             }
             return response;
+
         }
 
         private void btnDelAsk_Click(object sender, EventArgs e)
@@ -57,6 +74,11 @@ namespace En_decrypter
             string response = "";
             string successfulMsgs = "";
             string errorMsgs = "";
+
+            if (Microsoft.VisualBasic.Interaction.InputBox("Are you sure you want to delete those files and folders? You wont be able to recover them!", "Security Question", "OK") != "OK")
+            {
+                return;
+            }
 
             boxInput.Clear();
 
