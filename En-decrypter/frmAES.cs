@@ -209,9 +209,8 @@ namespace En_decrypter
                     using (var cryptoStream =
                 new CryptoStream(outFile, crypt.CreateEncryptor(), CryptoStreamMode.Write))
                     {
-                        fileStream.CopyTo(cryptoStream);
+                            fileStream.CopyTo(cryptoStream);
                     }
-
                 }
                 lblResponse.Text = "Encryption Succesfull!\n File has been safed to " + outfilepath;
                 lblResponse.ForeColor = Color.FromArgb(0, 128, 43);

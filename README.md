@@ -19,17 +19,15 @@ Secure Delete:
 - fix drag and drop not working when started as administrator
 
 Hashing algorithms:
-- dropdown menu
-- textbox and button to switch strings and files
+- add BCrypt, Scrypt, Whirlpool, NTLM, LANMAN
+- textbox drag and drop, auto switch between file and string
 
 AES:
-- add string drag and drop
 - make string and file enrcyption compatible
 - (file encryption:) write filename encrypted to file
 - (file decryption:) check if file was encrypted by this program, delete last line, secure delete
 
 PGP:
-- add string drag and drop
 - fix verified file output
 - ?create Keypair
 - secure delete file after use

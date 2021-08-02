@@ -35,10 +35,11 @@ namespace en_decrypter
 
         frmStart FrmStart_Vrb = new frmStart() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         frmPwdCreate FrmPwdCreate_Vrb = new frmPwdCreate() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        FrmSecDel FrmSecDel_Vrb = new FrmSecDel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        frmHashes FrmHashes_Vrb = new frmHashes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         frmAES FrmAES_Vrb = new frmAES() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         frmPGP FrmPGP_Vrb = new frmPGP() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-        FrmSecDel FrmSecDel_Vrb = new FrmSecDel() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -91,6 +92,14 @@ namespace en_decrypter
             FrmSecDel_Vrb.FormBorderStyle = FormBorderStyle.None;
             this.PnlFormLoader.Controls.Add(FrmSecDel_Vrb);
             FrmSecDel_Vrb.Show();
+        }
+        private void btnHashes_Click(object sender, EventArgs e)
+        {
+            menuTitle.Text = "Hash Algorithms";
+            this.PnlFormLoader.Controls.Clear();
+            FrmHashes_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(FrmHashes_Vrb);
+            FrmHashes_Vrb.Show();
         }
 
         private void btnAES_Click(object sender, EventArgs e)

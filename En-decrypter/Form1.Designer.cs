@@ -45,6 +45,7 @@ namespace en_decrypter
             this.menuTitle = new System.Windows.Forms.Label();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnInvis = new System.Windows.Forms.Button();
+            this.btnHashes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
@@ -53,6 +54,7 @@ namespace en_decrypter
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(80)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.btnHashes);
             this.panel1.Controls.Add(this.btnSecDel);
             this.panel1.Controls.Add(this.btnPGP);
             this.panel1.Controls.Add(this.btnAES);
@@ -174,6 +176,15 @@ namespace en_decrypter
             this.btnInvis.UseVisualStyleBackColor = true;
             this.btnInvis.Click += new System.EventHandler(this.btnInvis_Click);
             // 
+            // btnHashes
+            // 
+            this.btnHashes.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnHashes, "btnHashes");
+            this.btnHashes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHashes.Name = "btnHashes";
+            this.btnHashes.UseVisualStyleBackColor = true;
+            this.btnHashes.Click += new System.EventHandler(this.btnHashes_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -216,6 +227,7 @@ namespace en_decrypter
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnInvis;
+        private System.Windows.Forms.Button btnHashes;
     }
 }
 
