@@ -125,14 +125,25 @@ namespace En_decrypter
 
         private void boxInput_DragDrop(object sender, DragEventArgs e)
         {
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            if (files != null && files.Length != 0)
+            try
             {
-                for (int i = 0; i < files.Length; i++)
+                if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 {
-                    boxInput.Text = boxInput.Text + Environment.NewLine + files[i];
+                    string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                    foreach (string file in files)
+                    {
+                        using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                        {
+                            boxInput.Text = streamReader.ReadToEnd();
+                        }
+                    }
+                }
+                else if (e.Data.GetDataPresent(DataFormats.StringFormat))
+                {
+                    boxInput.Text = (string)e.Data.GetData(DataFormats.StringFormat);
                 }
             }
+            catch (Exception) { }
             boxInput.Select(boxInput.Text.Length - 1, boxInput.Text.Length - 1);
             boxInput.ScrollToCaret();
             
@@ -140,7 +151,7 @@ namespace En_decrypter
 
         private void boxInput_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            if (e.Data.GetDataPresent(DataFormats.FileDrop) || e.Data.GetDataPresent(DataFormats.StringFormat))
                 e.Effect = DragDropEffects.Copy;
             else
                 e.Effect = DragDropEffects.None;

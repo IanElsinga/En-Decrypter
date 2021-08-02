@@ -353,7 +353,7 @@ namespace En_decrypter
 
         private void boxEnc_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            if (e.Data.GetDataPresent(DataFormats.FileDrop) || e.Data.GetDataPresent(DataFormats.StringFormat))
                 e.Effect = DragDropEffects.Copy;
             else
                 e.Effect = DragDropEffects.None;
@@ -363,13 +363,20 @@ namespace En_decrypter
         {
             try
             {
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-                foreach (string file in files)
+                if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 {
-                    using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                    string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                    foreach (string file in files)
                     {
-                        boxPlain.Text = streamReader.ReadToEnd();
+                        using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                        {
+                            boxPlain.Text = streamReader.ReadToEnd();
+                        }
                     }
+                }
+                else if (e.Data.GetDataPresent(DataFormats.StringFormat))
+                {
+                    boxPlain.Text = (string)e.Data.GetData(DataFormats.StringFormat);
                 }
             }
             catch (Exception)
@@ -386,13 +393,20 @@ namespace En_decrypter
         {
             try
             {
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-                foreach (string file in files)
+                if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 {
-                    using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                    string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                    foreach (string file in files)
                     {
-                        boxEnc.Text = streamReader.ReadToEnd();
+                        using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                        {
+                            boxEnc.Text = streamReader.ReadToEnd();
+                        }
                     }
+                }
+                else if (e.Data.GetDataPresent(DataFormats.StringFormat))
+                {
+                    boxEnc.Text = (string)e.Data.GetData(DataFormats.StringFormat);
                 }
             }
             catch (Exception)
@@ -407,7 +421,7 @@ namespace En_decrypter
 
         private void boxPlain_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            if (e.Data.GetDataPresent(DataFormats.FileDrop) || e.Data.GetDataPresent(DataFormats.StringFormat))
                 e.Effect = DragDropEffects.Copy;
             else
                 e.Effect = DragDropEffects.None;
