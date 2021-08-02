@@ -16,11 +16,23 @@ namespace En_decrypter
     {
         private byte[] IV = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
         private int BlockSize = 128;
+        private bool smtWentWrong = false;
+
         public frmAES()
         {
             InitializeComponent();
         }
 
+
+        private void delFile(string input, bool ask)
+        {
+
+            if (ask && MessageBox.Show("Are you sure you want to delete " + input + "? \nYou won't be able to recover it!", "Security Question", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
+            new FrmSecDel().SecDelFile(input);
+        }
         private void btnEnc_Click(object sender, EventArgs e)
         {
             lblResponse.Text = "";
@@ -165,8 +177,8 @@ namespace En_decrypter
             {
                 //write original filename to end of file
                 //writer.Write("\nENCRYPTEDFILENAME\n" + filename);
-
                 //create random filename
+
                 string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
                 StringBuilder res = new StringBuilder();
                 do
@@ -182,31 +194,40 @@ namespace En_decrypter
                 }
                 while (File.Exists(outfilepath));
             }
-
-            using (SymmetricAlgorithm crypt = Aes.Create())
-            using (FileStream fileStream = File.OpenRead(filepath))
-            using (FileStream outFile = File.Create(outfilepath))
+            try
             {
-                
-                HashAlgorithm hash = SHA256.Create();
-                crypt.BlockSize = BlockSize;
-                crypt.Key = hash.ComputeHash(Encoding.UTF8.GetBytes(boxPwd.Text));
-                crypt.IV = IV;
-
-                using (var cryptoStream =
-            new CryptoStream(outFile, crypt.CreateEncryptor(), CryptoStreamMode.Write))
+                using (SymmetricAlgorithm crypt = Aes.Create())
+                using (FileStream fileStream = File.OpenRead(filepath))
+                using (FileStream outFile = File.Create(outfilepath))
                 {
-                    fileStream.CopyTo(cryptoStream);
+
+                    HashAlgorithm hash = SHA256.Create();
+                    crypt.BlockSize = BlockSize;
+                    crypt.Key = hash.ComputeHash(Encoding.UTF8.GetBytes(boxPwd.Text));
+                    crypt.IV = IV;
+
+                    using (var cryptoStream =
+                new CryptoStream(outFile, crypt.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        fileStream.CopyTo(cryptoStream);
+                    }
+
                 }
-
+                lblResponse.Text = "Encryption Succesfull!\n File has been safed to " + outfilepath;
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+                smtWentWrong = false;
             }
-                if (checkDelFileAU.Checked)
+            catch(Exception)
             {
-                //!!!
+                delFile(outfilepath, false);
+                lblResponse.Text = "Insufficient permissions safing file to " + outfilepath;
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                smtWentWrong = true;
             }
-
-            lblResponse.Text = "Encryption Succesfull!\n File has been safed to " + outfilepath;
-            lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+            if (!smtWentWrong && checkDelFileAU.Checked)
+            {
+                delFile(filepath, true);
+            }
 
         }
 
@@ -291,12 +312,18 @@ namespace En_decrypter
                         fileStream.CopyTo(cryptoStream);
                     }
                 }
+                smtWentWrong = false;
             }
             catch (Exception)
             {
-                File.Delete(outfilepath);
+                delFile(outfilepath, false);
                 lblResponse.Text = "The used Password is wrong!";
                 lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                smtWentWrong = true;
+            }
+            if (!smtWentWrong && checkDelFileAU.Checked)
+            {
+                delFile(filepath, true);
             }
         }
         private void boxPwd_TextChanged(object sender, EventArgs e)
@@ -322,6 +349,68 @@ namespace En_decrypter
         private void button1_Click(object sender, EventArgs e) //btnPasteEnc
         {
             boxEnc.Text = Clipboard.GetText();
+        }
+
+        private void boxEnc_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void boxPlain_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string file in files)
+                {
+                    using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                    {
+                        boxPlain.Text = streamReader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lblResponse.Text = "The selected file is invalid!";
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                return;
+            }
+            boxPlain.Select(boxPlain.Text.Length - 1, boxPlain.Text.Length - 1);
+            boxPlain.ScrollToCaret();
+        }
+
+        private void boxEnc_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string file in files)
+                {
+                    using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                    {
+                        boxEnc.Text = streamReader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lblResponse.Text = "The selected file is invalid!";
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                return;
+            }
+            boxEnc.Select(boxEnc.Text.Length - 1, boxEnc.Text.Length - 1);
+            boxEnc.ScrollToCaret();
+        }
+
+        private void boxPlain_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
         }
     }
 }

@@ -15,7 +15,6 @@ Start:
 - everything
 
 Secure Delete:
-- change Security Question window
 - add start as admin when needed
 - fix drag and drop not working when started as administrator
 
@@ -24,13 +23,13 @@ Hashing algorithms:
 - textbox and button to switch strings and files
 
 AES:
+- add string drag and drop
+- make string and file enrcyption compatible
 - (file encryption:) write filename encrypted to file
 - (file decryption:) check if file was encrypted by this program, delete last line, secure delete
-- secure delete file after use
-- (secure) delete file if something goes wrong
-- add drag and drop
 
 PGP:
+- add string drag and drop
 - fix verified file output
 - ?create Keypair
 - secure delete file after use

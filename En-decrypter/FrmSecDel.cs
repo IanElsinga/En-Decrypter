@@ -75,7 +75,7 @@ namespace En_decrypter
             string successfulMsgs = "";
             string errorMsgs = "";
 
-            if (Microsoft.VisualBasic.Interaction.InputBox("Are you sure you want to delete those files and folders? You wont be able to recover them!", "Security Question", "OK") != "OK")
+            if (MessageBox.Show("Are you sure you want to delete those files and folders? \nYou won't be able to recover them!", "Security Question", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 return;
             }

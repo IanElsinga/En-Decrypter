@@ -80,9 +80,9 @@ namespace En_decrypter
             this.checkDelFileAU.AutoSize = true;
             this.checkDelFileAU.Location = new System.Drawing.Point(285, 68);
             this.checkDelFileAU.Name = "checkDelFileAU";
-            this.checkDelFileAU.Size = new System.Drawing.Size(125, 19);
+            this.checkDelFileAU.Size = new System.Drawing.Size(162, 19);
             this.checkDelFileAU.TabIndex = 27;
-            this.checkDelFileAU.Text = "delete file after use";
+            this.checkDelFileAU.Text = "secure delete file after use";
             this.checkDelFileAU.UseVisualStyleBackColor = true;
             // 
             // btnFileEnc
@@ -137,6 +137,7 @@ namespace En_decrypter
             // 
             // boxEnc
             // 
+            this.boxEnc.AllowDrop = true;
             this.boxEnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxEnc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxEnc.Location = new System.Drawing.Point(22, 337);
@@ -145,6 +146,8 @@ namespace En_decrypter
             this.boxEnc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxEnc.Size = new System.Drawing.Size(504, 127);
             this.boxEnc.TabIndex = 19;
+            this.boxEnc.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragDrop);
+            this.boxEnc.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragEnter);
             // 
             // lblPlainTxt
             // 
@@ -157,6 +160,7 @@ namespace En_decrypter
             // 
             // boxPlain
             // 
+            this.boxPlain.AllowDrop = true;
             this.boxPlain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxPlain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxPlain.Location = new System.Drawing.Point(22, 179);
@@ -165,9 +169,12 @@ namespace En_decrypter
             this.boxPlain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxPlain.Size = new System.Drawing.Size(504, 127);
             this.boxPlain.TabIndex = 17;
+            this.boxPlain.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxPlain_DragDrop);
+            this.boxPlain.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragEnter);
             // 
             // boxKey
             // 
+            this.boxKey.AllowDrop = true;
             this.boxKey.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxKey.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxKey.Location = new System.Drawing.Point(22, 26);
@@ -177,6 +184,8 @@ namespace En_decrypter
             this.boxKey.Size = new System.Drawing.Size(200, 26);
             this.boxKey.TabIndex = 30;
             this.boxKey.TextChanged += new System.EventHandler(this.boxKey_TextChanged);
+            this.boxKey.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxKey_DragDrop);
+            this.boxKey.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxKey_DragEnter);
             // 
             // label2
             // 

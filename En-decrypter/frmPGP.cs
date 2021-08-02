@@ -15,10 +15,21 @@ namespace En_decrypter
     public partial class frmPGP : Form
     {
         private bool isPublicKey = true;
+        private bool smtWentWrong = false;
 
         public frmPGP()
         {
             InitializeComponent();
+        }
+
+        private void delFile(string input, bool ask)
+        {
+
+            if (ask && MessageBox.Show("Are you sure you want to delete " + input + "? \nYou won't be able to recover it!", "Security Question", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                return;
+            }
+            new FrmSecDel().SecDelFile(input);
         }
 
         private void btnEnc_Click(object sender, EventArgs e)
@@ -252,12 +263,19 @@ namespace En_decrypter
                     }
                     lblResponse.Text = "Encryption Succesfull!\n File has been safed to " + outfilepath;
                     lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+                    smtWentWrong = false;
                 }
                 catch (Exception)
                 {
+                    delFile(outfilepath, false);
                     lblResponse.Text = "Something went wrong!";
                     lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                    smtWentWrong = true;
                     return;
+                }
+                if (!smtWentWrong && checkDelFileAU.Checked)
+                {
+                    delFile(filepath, true);
                 }
             }
             else
@@ -312,12 +330,19 @@ namespace En_decrypter
                     }
                     lblResponse.Text = "Signation Succesfull!\n File has been safed to " + outfilepath;
                     lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+                    smtWentWrong = false;
                 }
                 catch (Exception)
                 {
+                    delFile(outfilepath, false);
                     lblResponse.Text = "The used Key or Password is wrong!";
                     lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                    smtWentWrong = true;
                     return;
+                }
+                if (!smtWentWrong && checkDelFileAU.Checked)
+                {
+                    delFile(filepath, true);
                 }
             }
         }
@@ -418,21 +443,29 @@ namespace En_decrypter
                             {
                                 outstream.Write(Encoding.ASCII.GetBytes(plainoutput));
                             }
-
+                                smtWentWrong = false;
                         }
                         else
                         {
                             lblResponse.Text = "File is not verified!";
                             lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                            smtWentWrong = true;
                         }
                     }
                 }
                 catch (Exception)
                 {
+                    delFile(outfilepath, false);
                     lblResponse.Text = "The used Key is wrong!";
                     lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                    smtWentWrong = true;
                     return;
                 }
+                if (!smtWentWrong && checkDelFileAU.Checked)
+                {
+                    delFile(filepath, true);
+                }
+
             }
             else
             {
@@ -474,12 +507,19 @@ namespace En_decrypter
                     }
                     lblResponse.Text = "Decryption Succesfull!\n File has been safed to " + outfilepath;
                     lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+                    smtWentWrong = false;
                 }
                 catch (Exception)
                 {
+                    delFile(outfilepath, false);
                     lblResponse.Text = "The used Key or Password is wrong!";
                     lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                    smtWentWrong = true;
                     return;
+                }
+                if (!smtWentWrong && checkDelFileAU.Checked)
+                {
+                    delFile(filepath, true);
                 }
             }
         }
@@ -570,6 +610,93 @@ namespace En_decrypter
                 lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
                 return;
             }
+            boxKey.Select(boxKey.Text.Length - 1, boxKey.Text.Length - 1);
+            boxKey.ScrollToCaret();
+        }
+
+        private void boxKey_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void boxKey_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string file in files)
+                {
+                    using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                    {
+                        boxKey.Text = streamReader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                lblResponse.Text = "The selected file is invalid!" + exception;
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                return;
+            }
+            boxKey.Select(boxKey.Text.Length - 1, boxKey.Text.Length - 1);
+            boxKey.ScrollToCaret();
+        }
+
+        private void boxEnc_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void boxEnc_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string file in files)
+                {
+                    using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                    {
+                        boxEnc.Text = streamReader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lblResponse.Text = "The selected file is invalid!";
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                return;
+            }
+            boxEnc.Select(boxEnc.Text.Length - 1, boxEnc.Text.Length - 1);
+            boxEnc.ScrollToCaret();
+        }
+
+        private void boxPlain_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string file in files)
+                {
+                    using (var streamReader = new StreamReader(file, Encoding.ASCII))
+                    {
+                        boxPlain.Text = streamReader.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lblResponse.Text = "The selected file is invalid!";
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                return;
+            }
+            boxPlain.Select(boxPlain.Text.Length - 1, boxPlain.Text.Length - 1);
+            boxPlain.ScrollToCaret();
         }
     }
 }

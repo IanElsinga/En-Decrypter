@@ -51,6 +51,7 @@ namespace En_decrypter
             // 
             // boxPlain
             // 
+            this.boxPlain.AllowDrop = true;
             this.boxPlain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxPlain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxPlain.Location = new System.Drawing.Point(22, 179);
@@ -59,6 +60,8 @@ namespace En_decrypter
             this.boxPlain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxPlain.Size = new System.Drawing.Size(504, 127);
             this.boxPlain.TabIndex = 0;
+            this.boxPlain.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxPlain_DragDrop);
+            this.boxPlain.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxPlain_DragEnter);
             // 
             // lblPlainTxt
             // 
@@ -80,6 +83,7 @@ namespace En_decrypter
             // 
             // boxEnc
             // 
+            this.boxEnc.AllowDrop = true;
             this.boxEnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
             this.boxEnc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxEnc.Location = new System.Drawing.Point(22, 337);
@@ -88,6 +92,8 @@ namespace En_decrypter
             this.boxEnc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxEnc.Size = new System.Drawing.Size(504, 127);
             this.boxEnc.TabIndex = 2;
+            this.boxEnc.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragDrop);
+            this.boxEnc.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragEnter);
             // 
             // lblPwd
             // 
