@@ -332,12 +332,22 @@ namespace En_decrypter
 
         private void btnCopy1_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(boxPlain.Text);
+            if (boxPlain.Text != "")
+            {
+                Clipboard.SetText(boxPlain.Text);
+                lblResponse.Text = "Successfully copied text to Clipboard";
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+            }
         }
 
         private void btnCopy2_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(boxEnc.Text);
+            if (boxEnc.Text != "")
+            {
+                Clipboard.SetText(boxEnc.Text);
+                lblResponse.Text = "Successfully copied text to Clipboard";
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+            }
         }
 
         private void btnPastePlain_Click(object sender, EventArgs e)

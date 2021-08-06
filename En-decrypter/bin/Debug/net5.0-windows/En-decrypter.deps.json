@@ -8,8 +8,6 @@
     ".NETCoreApp,Version=v5.0": {
       "En-decrypter/0.7": {
         "dependencies": {
-          "BouncyCastle": "1.8.9",
-          "BouncyCastle.OpenPgp": "1.8.1.1",
           "PgpCore": "5.2.0",
           "Portable.BouncyCastle": "1.8.10",
           "securedelete-net": "0.2.1"
@@ -23,15 +21,6 @@
           },
           "fo-DK/En-decrypter.resources.dll": {
             "locale": "fo-DK"
-          }
-        }
-      },
-      "BouncyCastle/1.8.9": {},
-      "BouncyCastle.OpenPgp/1.8.1.1": {
-        "runtime": {
-          "lib/netstandard2.0/BouncyCastle.OpenPgp.dll": {
-            "assemblyVersion": "1.8.1.0",
-            "fileVersion": "1.8.15362.1"
           }
         }
       },
@@ -240,20 +229,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "BouncyCastle/1.8.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
-      "path": "bouncycastle/1.8.9",
-      "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
-    },
-    "BouncyCastle.OpenPgp/1.8.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-hHuFuQRbaKErKrIlIQnS+BIbCJfFUinhh0TiEuo9xgJ1ZoYXz1L4I2geGhVX6fqI0JaNjOcCVi0OITpu67kVRg==",
-      "path": "bouncycastle.openpgp/1.8.1.1",
-      "hashPath": "bouncycastle.openpgp.1.8.1.1.nupkg.sha512"
     },
     "diskdetector-net/0.3.2": {
       "type": "package",

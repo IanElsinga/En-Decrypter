@@ -39,6 +39,7 @@ namespace en_decrypter
         frmHashes FrmHashes_Vrb = new frmHashes() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         frmAES FrmAES_Vrb = new frmAES() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         frmPGP FrmPGP_Vrb = new frmPGP() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        frmSettings frmSettings_Vrb = new frmSettings() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         
         public Form1()
         {
@@ -124,6 +125,9 @@ namespace en_decrypter
         {
             menuTitle.Text = "Settings";
             this.PnlFormLoader.Controls.Clear();
+            frmSettings_Vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(frmSettings_Vrb);
+            frmSettings_Vrb.Show();
         }
         
         private void panel2_Paint(object sender, PaintEventArgs e)

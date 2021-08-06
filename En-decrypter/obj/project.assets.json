@@ -2,24 +2,6 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
-      "BouncyCastle/1.8.9": {
-        "type": "package",
-        "compile": {
-          "lib/BouncyCastle.Crypto.dll": {}
-        },
-        "runtime": {
-          "lib/BouncyCastle.Crypto.dll": {}
-        }
-      },
-      "BouncyCastle.OpenPgp/1.8.1.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/BouncyCastle.OpenPgp.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/BouncyCastle.OpenPgp.dll": {}
-        }
-      },
       "diskdetector-net/0.3.2": {
         "type": "package",
         "dependencies": {
@@ -333,34 +315,6 @@
     }
   },
   "libraries": {
-    "BouncyCastle/1.8.9": {
-      "sha512": "axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
-      "type": "package",
-      "path": "bouncycastle/1.8.9",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "bouncycastle.1.8.9.nupkg.sha512",
-        "bouncycastle.nuspec",
-        "lib/BouncyCastle.Crypto.dll"
-      ]
-    },
-    "BouncyCastle.OpenPgp/1.8.1.1": {
-      "sha512": "hHuFuQRbaKErKrIlIQnS+BIbCJfFUinhh0TiEuo9xgJ1ZoYXz1L4I2geGhVX6fqI0JaNjOcCVi0OITpu67kVRg==",
-      "type": "package",
-      "path": "bouncycastle.openpgp/1.8.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "bouncycastle.openpgp.1.8.1.1.nupkg.sha512",
-        "bouncycastle.openpgp.nuspec",
-        "lib/net20/BouncyCastle.OpenPgp.dll",
-        "lib/net20/BouncyCastle.OpenPgp.xml",
-        "lib/netstandard2.0/BouncyCastle.OpenPgp.dll",
-        "lib/netstandard2.0/BouncyCastle.OpenPgp.xml"
-      ]
-    },
     "diskdetector-net/0.3.2": {
       "sha512": "mxUvLdk3JaWzdPyQUKjY8X1WwqebhdQPGsz68K19eTvkCAsdcdm3wKyGoyNSmOn+fPYX7UUPfUMZduDVq8/SXw==",
       "type": "package",
@@ -1613,8 +1567,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "BouncyCastle >= 1.8.9",
-      "BouncyCastle.OpenPGP >= 1.8.1.1",
       "PgpCore >= 5.2.0",
       "Portable.BouncyCastle >= 1.8.10",
       "securedelete-net >= 0.2.1"
@@ -1664,14 +1616,6 @@
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
-          "BouncyCastle": {
-            "target": "Package",
-            "version": "[1.8.9, )"
-          },
-          "BouncyCastle.OpenPGP": {
-            "target": "Package",
-            "version": "[1.8.1.1, )"
-          },
           "PgpCore": {
             "target": "Package",
             "version": "[5.2.0, )"
@@ -1706,17 +1650,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.205\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'BouncyCastle 1.8.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "BouncyCastle",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }

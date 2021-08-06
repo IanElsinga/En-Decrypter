@@ -32,8 +32,6 @@
     <Compile Remove="frmAES - Copy - Copy - Copy.Designer.cs" />
     <Compile Remove="frmAES - Copy - Copy.Designer.cs" />
     <Compile Remove="frmAES - Copy.Designer.cs" />
-    <Compile Remove="frmSettings.cs" />
-    <Compile Remove="frmSettings.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,7 +50,6 @@
     <EmbeddedResource Remove="frmAES - Copy - Copy - Copy.resx" />
     <EmbeddedResource Remove="frmAES - Copy - Copy.resx" />
     <EmbeddedResource Remove="frmAES - Copy.resx" />
-    <EmbeddedResource Remove="frmSettings.resx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -76,8 +73,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BouncyCastle" Version="1.8.9" />
-    <PackageReference Include="BouncyCastle.OpenPGP" Version="1.8.1.1" />
     <PackageReference Include="PgpCore" Version="5.2.0" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.10" />
     <PackageReference Include="securedelete-net" Version="0.2.1" />

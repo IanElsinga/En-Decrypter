@@ -16,6 +16,7 @@ namespace En_decrypter
     {
         private bool isPublicKey = true;
         private bool smtWentWrong = false;
+        private bool createKeyPair = false;
 
         public frmPGP()
         {
@@ -70,12 +71,6 @@ namespace En_decrypter
             }
             else
             {
-                if (boxPwd.Text == "")
-                {
-                    lblResponse.Text = "The Password shouldn't be empty!";
-                    lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
-                    return;
-                }
                 try
                 {
                     using (PGP pgp = new PGP())
@@ -151,12 +146,6 @@ namespace En_decrypter
                 lblResponse.Text = "Decryption Succesfull!";
                 lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
 
-                if (boxPwd.Text == "")
-                {
-                    lblResponse.Text = "The Password shouldn't be empty!";
-                    lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
-                    return;
-                }
                 try
                 {
                     using (PGP pgp = new PGP())
@@ -548,12 +537,22 @@ namespace En_decrypter
 
         private void btnCopyPlain_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(boxPlain.Text);
+            if (boxPlain.Text != "")
+            {
+                Clipboard.SetText(boxPlain.Text);
+                lblResponse.Text = "Successfully copied text to Clipboard";
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+            }
         }
 
         private void btnCopyEnc_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(boxPlain.Text);
+            if (boxEnc.Text != "")
+            {
+                Clipboard.SetText(boxEnc.Text);
+                lblResponse.Text = "Successfully copied text to Clipboard";
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+            }
         }
 
         private void btnPasteEnc_Click(object sender, EventArgs e)
@@ -725,6 +724,76 @@ namespace En_decrypter
             }
             boxPlain.Select(boxPlain.Text.Length - 1, boxPlain.Text.Length - 1);
             boxPlain.ScrollToCaret();
+        }
+
+        private void btnCreateKeypair_Click(object sender, EventArgs e)
+        {
+            string outfilepath = "";
+
+            if (createKeyPair == false)
+            {
+                btnKeyFile.Text = "name";
+
+                lblResponse.Text = "Please enter a username/email and password and click 'generate Key pair again'";
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+
+                createKeyPair = true;
+                return;
+            }
+            else
+            {
+
+                try
+                {
+                    using (FolderBrowserDialog folder = new FolderBrowserDialog())
+                    {
+                        //folder.Description = "Select a folder ";
+                        if (folder.ShowDialog() == DialogResult.OK)
+                        {
+                            outfilepath = folder.SelectedPath;
+                        }
+                        else
+                        {
+                            lblResponse.Text = "You have to select a file!";
+                            lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                            return;
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    lblResponse.Text = "The selected file is invalid!";
+                    lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                    return;
+                }
+            }
+
+            string fileplus = "";
+            int i = 1;
+            while (File.Exists(outfilepath + "\\" + fileplus + "privateKey.asc") || File.Exists(outfilepath + "\\" + fileplus + "publicKey.asc"))
+            {
+                fileplus = i + "_";
+                i++;
+            }
+
+            try
+            {
+                using (PGP pgp = new PGP())
+                {
+                    pgp.GenerateKey(outfilepath + "\\" + fileplus + "publicKey.asc", outfilepath + "\\" + fileplus + "privateKey.asc", boxKey.Text, boxPwd.Text);
+                }
+                lblResponse.Text = "Successfully created Keyfiles. \nThe files have been safed to " + outfilepath;
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+            }
+            catch (Exception)
+            {
+                lblResponse.Text = "Insufficient permissions safing files to " + outfilepath;
+                lblResponse.ForeColor = Color.FromArgb(128, 0, 0);
+                return;
+            }
+
+            btnKeyFile.Text = "Key";
+            createKeyPair = false;
         }
     }
 }

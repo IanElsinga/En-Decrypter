@@ -20,7 +20,6 @@ Secure Delete:
 
 Hashing algorithms:
 - add BCrypt, Scrypt, Whirlpool, NTLM, LANMAN
-- textbox drag and drop, auto switch between file and string
 
 AES:
 - make string and file enrcyption compatible
@@ -29,9 +28,9 @@ AES:
 
 PGP:
 - fix verified file output
-- ?create Keypair
-- secure delete file after use
-- (secure) delete file if something goes wrong
+- create Keypair without file output?
+
+New async encryption that works against quantum pcs
 
 Settings:
 - user login
@@ -39,3 +38,4 @@ Settings:
 - settings file
 - autologin
 - new default profile pic
+- Global color themes

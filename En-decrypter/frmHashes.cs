@@ -19,6 +19,7 @@ namespace En_decrypter
         public frmHashes()
         {
             InitializeComponent();
+            comboHashes.SelectedIndex = 0;
         }
 
         private void boxInput_TextChanged(object sender, EventArgs e)
@@ -154,93 +155,7 @@ namespace En_decrypter
                         }
                         boxResponse.Text = sb.ToString();
                         break;
-                    }
-                case 4: //BCrypt
-                    {
-                        var bcrypt = SHA512.Create(); //!!!
-                        var inputBytes = Encoding.ASCII.GetBytes(boxInput.Text);
-                        if (isString == false)
-                        {
-                            inputBytes = File.ReadAllBytes(boxInput.Text);
-                        }
-                        var hash = bcrypt.ComputeHash(inputBytes);
-                        var sb = new StringBuilder();
-                        for (var i = 0; i < hash.Length; i++)
-                        {
-                            sb.Append(hash[i].ToString("X2"));
-                        }
-                        boxResponse.Text = sb.ToString();
-                        break;
-                    }
-                case 5: //Scrypt
-                    {
-                        var scrypt = SHA512.Create(); //!!!
-                        var inputBytes = Encoding.ASCII.GetBytes(boxInput.Text);
-                        if (isString == false)
-                        {
-                            inputBytes = File.ReadAllBytes(boxInput.Text);
-                        }
-                        var hash = scrypt.ComputeHash(inputBytes);
-                        var sb = new StringBuilder();
-                        for (var i = 0; i < hash.Length; i++)
-                        {
-                            sb.Append(hash[i].ToString("X2"));
-                        }
-                        boxResponse.Text = sb.ToString();
-                        break;
-                    }
-                case 6: //Whirlpool
-                    {
-                        var whirlpool = SHA512.Create(); //!!!
-                        var inputBytes = Encoding.ASCII.GetBytes(boxInput.Text);
-                        if (isString == false)
-                        {
-                            inputBytes = File.ReadAllBytes(boxInput.Text);
-                        }
-                        var hash = whirlpool.ComputeHash(inputBytes);
-                        var sb = new StringBuilder();
-                        for (var i = 0; i < hash.Length; i++)
-                        {
-                            sb.Append(hash[i].ToString("X2"));
-                        }
-                        boxResponse.Text = sb.ToString();
-                        break;
-                    }
-                case 7: //NTLM
-                    {
-                        var ntlm = SHA512.Create(); //!!!
-                        var inputBytes = Encoding.ASCII.GetBytes(boxInput.Text);
-                        if (isString == false)
-                        {
-                            inputBytes = File.ReadAllBytes(boxInput.Text);
-                        }
-                        var hash = ntlm.ComputeHash(inputBytes);
-                        var sb = new StringBuilder();
-                        for (var i = 0; i < hash.Length; i++)
-                        {
-                            sb.Append(hash[i].ToString("X2"));
-                        }
-                        boxResponse.Text = sb.ToString();
-                        break;
-                    }
-                case 8: //LANMAN
-                    {
-                        var lanman = SHA512.Create(); //!!!
-                        var inputBytes = Encoding.ASCII.GetBytes(boxInput.Text);
-                        if (isString == false)
-                        {
-                            inputBytes = File.ReadAllBytes(boxInput.Text);
-                        }
-                        var hash = lanman.ComputeHash(inputBytes);
-                        var sb = new StringBuilder();
-                        for (var i = 0; i < hash.Length; i++)
-                        {
-                            sb.Append(hash[i].ToString("X2"));
-                        }
-                        boxResponse.Text = sb.ToString();
-                        break;
-                    }
-                
+                    }                
             }
         }
     }

@@ -69,7 +69,12 @@ namespace En_decrypter
 
         private void btnPwdCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(boxPwdCreate.Text);
+            if (boxPwdCreate.Text != "")
+            {
+                Clipboard.SetText(boxPwdCreate.Text);
+                lblResponse.Text = "Successfully copied password to Clipboard";
+                lblResponse.ForeColor = Color.FromArgb(0, 128, 43);
+            }
         }
 
         private void boxPwdLength_TextChanged(object sender, EventArgs e)

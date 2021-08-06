@@ -31,6 +31,7 @@ namespace en_decrypter
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHashes = new System.Windows.Forms.Button();
             this.btnSecDel = new System.Windows.Forms.Button();
             this.btnPGP = new System.Windows.Forms.Button();
             this.btnAES = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace en_decrypter
             this.menuTitle = new System.Windows.Forms.Label();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnInvis = new System.Windows.Forms.Button();
-            this.btnHashes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
@@ -64,6 +64,15 @@ namespace en_decrypter
             this.panel1.Controls.Add(this.panel2);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // btnHashes
+            // 
+            this.btnHashes.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnHashes, "btnHashes");
+            this.btnHashes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHashes.Name = "btnHashes";
+            this.btnHashes.UseVisualStyleBackColor = true;
+            this.btnHashes.Click += new System.EventHandler(this.btnHashes_Click);
             // 
             // btnSecDel
             // 
@@ -149,6 +158,7 @@ namespace en_decrypter
             this.btnExit.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.Name = "btnExit";
+            this.btnExit.TabStop = false;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
@@ -163,6 +173,7 @@ namespace en_decrypter
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnMinimize, "btnMinimize");
             this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.TabStop = false;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
@@ -175,15 +186,6 @@ namespace en_decrypter
             this.btnInvis.UseMnemonic = false;
             this.btnInvis.UseVisualStyleBackColor = true;
             this.btnInvis.Click += new System.EventHandler(this.btnInvis_Click);
-            // 
-            // btnHashes
-            // 
-            this.btnHashes.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnHashes, "btnHashes");
-            this.btnHashes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnHashes.Name = "btnHashes";
-            this.btnHashes.UseVisualStyleBackColor = true;
-            this.btnHashes.Click += new System.EventHandler(this.btnHashes_Click);
             // 
             // Form1
             // 

@@ -52,25 +52,26 @@ namespace En_decrypter
             this.btnPasteEnc = new System.Windows.Forms.Button();
             this.btnPasteKey = new System.Windows.Forms.Button();
             this.btnKeyFile = new System.Windows.Forms.Button();
+            this.btnCreateKeypair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkRandomFileName
             // 
             this.checkRandomFileName.AutoSize = true;
-            this.checkRandomFileName.Location = new System.Drawing.Point(285, 45);
+            this.checkRandomFileName.Location = new System.Drawing.Point(286, 50);
             this.checkRandomFileName.Name = "checkRandomFileName";
             this.checkRandomFileName.Size = new System.Drawing.Size(141, 19);
-            this.checkRandomFileName.TabIndex = 29;
+            this.checkRandomFileName.TabIndex = 10;
             this.checkRandomFileName.Text = "use random file name";
             this.checkRandomFileName.UseVisualStyleBackColor = true;
             // 
             // btnFileDec
             // 
             this.btnFileDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileDec.Location = new System.Drawing.Point(379, 91);
+            this.btnFileDec.Location = new System.Drawing.Point(380, 96);
             this.btnFileDec.Name = "btnFileDec";
             this.btnFileDec.Size = new System.Drawing.Size(78, 34);
-            this.btnFileDec.TabIndex = 28;
+            this.btnFileDec.TabIndex = 14;
             this.btnFileDec.Text = "verify file";
             this.btnFileDec.UseVisualStyleBackColor = true;
             this.btnFileDec.Click += new System.EventHandler(this.btnFileDec_Click);
@@ -78,20 +79,20 @@ namespace En_decrypter
             // checkDelFileAU
             // 
             this.checkDelFileAU.AutoSize = true;
-            this.checkDelFileAU.Location = new System.Drawing.Point(285, 68);
+            this.checkDelFileAU.Location = new System.Drawing.Point(286, 73);
             this.checkDelFileAU.Name = "checkDelFileAU";
             this.checkDelFileAU.Size = new System.Drawing.Size(162, 19);
-            this.checkDelFileAU.TabIndex = 27;
+            this.checkDelFileAU.TabIndex = 12;
             this.checkDelFileAU.Text = "secure delete file after use";
             this.checkDelFileAU.UseVisualStyleBackColor = true;
             // 
             // btnFileEnc
             // 
             this.btnFileEnc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileEnc.Location = new System.Drawing.Point(285, 91);
+            this.btnFileEnc.Location = new System.Drawing.Point(286, 96);
             this.btnFileEnc.Name = "btnFileEnc";
             this.btnFileEnc.Size = new System.Drawing.Size(78, 34);
-            this.btnFileEnc.TabIndex = 26;
+            this.btnFileEnc.TabIndex = 13;
             this.btnFileEnc.Text = "encrypt file";
             this.btnFileEnc.UseVisualStyleBackColor = true;
             this.btnFileEnc.Click += new System.EventHandler(this.btnFileEnc_Click);
@@ -102,7 +103,7 @@ namespace En_decrypter
             this.btnDec.Location = new System.Drawing.Point(144, 91);
             this.btnDec.Name = "btnDec";
             this.btnDec.Size = new System.Drawing.Size(78, 34);
-            this.btnDec.TabIndex = 25;
+            this.btnDec.TabIndex = 7;
             this.btnDec.Text = "verify";
             this.btnDec.UseVisualStyleBackColor = true;
             this.btnDec.Click += new System.EventHandler(this.btnDec_Click);
@@ -113,7 +114,7 @@ namespace En_decrypter
             this.btnEnc.Location = new System.Drawing.Point(22, 91);
             this.btnEnc.Name = "btnEnc";
             this.btnEnc.Size = new System.Drawing.Size(78, 34);
-            this.btnEnc.TabIndex = 24;
+            this.btnEnc.TabIndex = 6;
             this.btnEnc.Text = "encrypt";
             this.btnEnc.UseVisualStyleBackColor = true;
             this.btnEnc.Click += new System.EventHandler(this.btnEnc_Click);
@@ -145,7 +146,7 @@ namespace En_decrypter
             this.boxEnc.Name = "boxEnc";
             this.boxEnc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxEnc.Size = new System.Drawing.Size(504, 127);
-            this.boxEnc.TabIndex = 19;
+            this.boxEnc.TabIndex = 5;
             this.boxEnc.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragDrop);
             this.boxEnc.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragEnter);
             // 
@@ -168,7 +169,7 @@ namespace En_decrypter
             this.boxPlain.Name = "boxPlain";
             this.boxPlain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxPlain.Size = new System.Drawing.Size(504, 127);
-            this.boxPlain.TabIndex = 17;
+            this.boxPlain.TabIndex = 4;
             this.boxPlain.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxPlain_DragDrop);
             this.boxPlain.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxEnc_DragEnter);
             // 
@@ -182,7 +183,7 @@ namespace En_decrypter
             this.boxKey.Multiline = true;
             this.boxKey.Name = "boxKey";
             this.boxKey.Size = new System.Drawing.Size(200, 26);
-            this.boxKey.TabIndex = 30;
+            this.boxKey.TabIndex = 2;
             this.boxKey.TextChanged += new System.EventHandler(this.boxKey_TextChanged);
             this.boxKey.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxKey_DragDrop);
             this.boxKey.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxKey_DragEnter);
@@ -205,15 +206,15 @@ namespace En_decrypter
             this.boxPwd.Margin = new System.Windows.Forms.Padding(2);
             this.boxPwd.Name = "boxPwd";
             this.boxPwd.Size = new System.Drawing.Size(201, 16);
-            this.boxPwd.TabIndex = 32;
+            this.boxPwd.TabIndex = 3;
             // 
             // btnSwitchKey
             // 
             this.btnSwitchKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSwitchKey.Location = new System.Drawing.Point(285, 21);
+            this.btnSwitchKey.Location = new System.Drawing.Point(286, 26);
             this.btnSwitchKey.Name = "btnSwitchKey";
             this.btnSwitchKey.Size = new System.Drawing.Size(147, 23);
-            this.btnSwitchKey.TabIndex = 34;
+            this.btnSwitchKey.TabIndex = 9;
             this.btnSwitchKey.Text = "use private Key";
             this.btnSwitchKey.UseVisualStyleBackColor = true;
             this.btnSwitchKey.Click += new System.EventHandler(this.btnSwitchKey_Click);
@@ -228,6 +229,7 @@ namespace En_decrypter
             this.btnCopyPlain.Name = "btnCopyPlain";
             this.btnCopyPlain.Size = new System.Drawing.Size(45, 31);
             this.btnCopyPlain.TabIndex = 35;
+            this.btnCopyPlain.TabStop = false;
             this.btnCopyPlain.Text = "copy";
             this.btnCopyPlain.UseVisualStyleBackColor = false;
             this.btnCopyPlain.Click += new System.EventHandler(this.btnCopyPlain_Click);
@@ -242,6 +244,7 @@ namespace En_decrypter
             this.btnCopyEnc.Name = "btnCopyEnc";
             this.btnCopyEnc.Size = new System.Drawing.Size(45, 31);
             this.btnCopyEnc.TabIndex = 36;
+            this.btnCopyEnc.TabStop = false;
             this.btnCopyEnc.Text = "copy";
             this.btnCopyEnc.UseVisualStyleBackColor = false;
             this.btnCopyEnc.Click += new System.EventHandler(this.btnCopyEnc_Click);
@@ -256,6 +259,7 @@ namespace En_decrypter
             this.btnPastePlain.Name = "btnPastePlain";
             this.btnPastePlain.Size = new System.Drawing.Size(45, 31);
             this.btnPastePlain.TabIndex = 37;
+            this.btnPastePlain.TabStop = false;
             this.btnPastePlain.Text = "paste";
             this.btnPastePlain.UseVisualStyleBackColor = false;
             this.btnPastePlain.Click += new System.EventHandler(this.btnPastePlain_Click);
@@ -270,6 +274,7 @@ namespace En_decrypter
             this.btnPasteEnc.Name = "btnPasteEnc";
             this.btnPasteEnc.Size = new System.Drawing.Size(45, 31);
             this.btnPasteEnc.TabIndex = 38;
+            this.btnPasteEnc.TabStop = false;
             this.btnPasteEnc.Text = "paste";
             this.btnPasteEnc.UseVisualStyleBackColor = false;
             this.btnPasteEnc.Click += new System.EventHandler(this.btnPasteEnc_Click);
@@ -284,6 +289,7 @@ namespace En_decrypter
             this.btnPasteKey.Name = "btnPasteKey";
             this.btnPasteKey.Size = new System.Drawing.Size(47, 26);
             this.btnPasteKey.TabIndex = 39;
+            this.btnPasteKey.TabStop = false;
             this.btnPasteKey.Text = "paste";
             this.btnPasteKey.UseVisualStyleBackColor = false;
             this.btnPasteKey.Click += new System.EventHandler(this.btnPasteKey_Click);
@@ -296,10 +302,23 @@ namespace En_decrypter
             this.btnKeyFile.Location = new System.Drawing.Point(22, 3);
             this.btnKeyFile.Name = "btnKeyFile";
             this.btnKeyFile.Size = new System.Drawing.Size(87, 23);
-            this.btnKeyFile.TabIndex = 40;
+            this.btnKeyFile.TabIndex = 1;
+            this.btnKeyFile.TabStop = false;
             this.btnKeyFile.Text = "Key";
             this.btnKeyFile.UseVisualStyleBackColor = false;
             this.btnKeyFile.Click += new System.EventHandler(this.btnKeyFile_Click);
+            // 
+            // btnCreateKeypair
+            // 
+            this.btnCreateKeypair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
+            this.btnCreateKeypair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateKeypair.Location = new System.Drawing.Point(286, 0);
+            this.btnCreateKeypair.Name = "btnCreateKeypair";
+            this.btnCreateKeypair.Size = new System.Drawing.Size(147, 23);
+            this.btnCreateKeypair.TabIndex = 8;
+            this.btnCreateKeypair.Text = "generate Key pair";
+            this.btnCreateKeypair.UseVisualStyleBackColor = false;
+            this.btnCreateKeypair.Click += new System.EventHandler(this.btnCreateKeypair_Click);
             // 
             // frmPGP
             // 
@@ -307,6 +326,7 @@ namespace En_decrypter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(552, 487);
+            this.Controls.Add(this.btnCreateKeypair);
             this.Controls.Add(this.btnKeyFile);
             this.Controls.Add(this.btnPasteKey);
             this.Controls.Add(this.btnPasteEnc);
@@ -361,5 +381,6 @@ namespace En_decrypter
         private System.Windows.Forms.Button btnPasteEnc;
         private System.Windows.Forms.Button btnPasteKey;
         private System.Windows.Forms.Button btnKeyFile;
+        private System.Windows.Forms.Button btnCreateKeypair;
     }
 }

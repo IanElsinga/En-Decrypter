@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj": {}
+    "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj": {
+    "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj": {
       "version": "0.7.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
+        "projectUniqueName": "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
         "projectName": "En-decrypter",
-        "projectPath": "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
+        "projectPath": "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
         "packagesPath": "C:\\Users\\jalupa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\obj\\",
+        "outputPath": "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,14 +44,6 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
-            "BouncyCastle": {
-              "target": "Package",
-              "version": "[1.8.9, )"
-            },
-            "BouncyCastle.OpenPGP": {
-              "target": "Package",
-              "version": "[1.8.1.1, )"
-            },
             "PgpCore": {
               "target": "Package",
               "version": "[5.2.0, )"

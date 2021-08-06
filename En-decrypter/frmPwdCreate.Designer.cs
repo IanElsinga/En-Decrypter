@@ -52,6 +52,7 @@ namespace En_decrypter
             this.boxPwdCreate.Name = "boxPwdCreate";
             this.boxPwdCreate.Size = new System.Drawing.Size(405, 23);
             this.boxPwdCreate.TabIndex = 1;
+            this.boxPwdCreate.TabStop = false;
             // 
             // boxPwdLength
             // 
@@ -59,7 +60,7 @@ namespace En_decrypter
             this.boxPwdLength.Location = new System.Drawing.Point(50, 99);
             this.boxPwdLength.Name = "boxPwdLength";
             this.boxPwdLength.Size = new System.Drawing.Size(49, 23);
-            this.boxPwdLength.TabIndex = 3;
+            this.boxPwdLength.TabIndex = 2;
             this.boxPwdLength.Text = "20";
             this.boxPwdLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.boxPwdLength.TextChanged += new System.EventHandler(this.boxPwdLength_TextChanged);
@@ -74,6 +75,7 @@ namespace En_decrypter
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Location = new System.Drawing.Point(106, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 15);
@@ -88,7 +90,7 @@ namespace En_decrypter
             this.checkUppercase.Location = new System.Drawing.Point(50, 160);
             this.checkUppercase.Name = "checkUppercase";
             this.checkUppercase.Size = new System.Drawing.Size(101, 19);
-            this.checkUppercase.TabIndex = 6;
+            this.checkUppercase.TabIndex = 4;
             this.checkUppercase.Text = "use uppercase";
             this.checkUppercase.UseVisualStyleBackColor = true;
             this.checkUppercase.CheckStateChanged += new System.EventHandler(this.checkUppercase_CheckStateChanged);
@@ -101,7 +103,7 @@ namespace En_decrypter
             this.checkNumbers.Location = new System.Drawing.Point(50, 185);
             this.checkNumbers.Name = "checkNumbers";
             this.checkNumbers.Size = new System.Drawing.Size(94, 19);
-            this.checkNumbers.TabIndex = 7;
+            this.checkNumbers.TabIndex = 5;
             this.checkNumbers.Text = "use numbers";
             this.checkNumbers.UseVisualStyleBackColor = true;
             this.checkNumbers.CheckStateChanged += new System.EventHandler(this.checkNumbers_CheckStateChanged);
@@ -114,7 +116,7 @@ namespace En_decrypter
             this.checkSpecialChar.Location = new System.Drawing.Point(50, 210);
             this.checkSpecialChar.Name = "checkSpecialChar";
             this.checkSpecialChar.Size = new System.Drawing.Size(140, 19);
-            this.checkSpecialChar.TabIndex = 8;
+            this.checkSpecialChar.TabIndex = 6;
             this.checkSpecialChar.Text = "use special characters";
             this.checkSpecialChar.UseVisualStyleBackColor = true;
             this.checkSpecialChar.CheckStateChanged += new System.EventHandler(this.checkSpecialChar_CheckStateChanged);
@@ -128,7 +130,7 @@ namespace En_decrypter
             this.btnPwdCopy.Location = new System.Drawing.Point(449, 273);
             this.btnPwdCopy.Name = "btnPwdCopy";
             this.btnPwdCopy.Size = new System.Drawing.Size(52, 23);
-            this.btnPwdCopy.TabIndex = 9;
+            this.btnPwdCopy.TabIndex = 7;
             this.btnPwdCopy.Text = "copy";
             this.btnPwdCopy.UseVisualStyleBackColor = false;
             this.btnPwdCopy.Click += new System.EventHandler(this.btnPwdCopy_Click);
@@ -141,7 +143,7 @@ namespace En_decrypter
             this.checkLowercase.Location = new System.Drawing.Point(50, 135);
             this.checkLowercase.Name = "checkLowercase";
             this.checkLowercase.Size = new System.Drawing.Size(99, 19);
-            this.checkLowercase.TabIndex = 13;
+            this.checkLowercase.TabIndex = 3;
             this.checkLowercase.Text = "use lowercase";
             this.checkLowercase.UseVisualStyleBackColor = true;
             this.checkLowercase.CheckStateChanged += new System.EventHandler(this.checkLowercase_CheckStateChanged);
@@ -153,7 +155,7 @@ namespace En_decrypter
             this.btnPwdCreate.Location = new System.Drawing.Point(50, 65);
             this.btnPwdCreate.Name = "btnPwdCreate";
             this.btnPwdCreate.Size = new System.Drawing.Size(101, 28);
-            this.btnPwdCreate.TabIndex = 14;
+            this.btnPwdCreate.TabIndex = 1;
             this.btnPwdCreate.Text = "new Password";
             this.btnPwdCreate.UseVisualStyleBackColor = false;
             this.btnPwdCreate.Click += new System.EventHandler(this.btnPwdCreate_Click);

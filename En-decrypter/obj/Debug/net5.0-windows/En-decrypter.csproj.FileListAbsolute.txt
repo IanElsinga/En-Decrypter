@@ -41,7 +41,6 @@ C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\En-decrypter.pdb
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\es-BZ\En-decrypter.resources.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\fo-DK\En-decrypter.resources.dll
-C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\BouncyCastle.OpenPgp.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\PgpCore.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\en_decrypter.Form1.resources
@@ -103,3 +102,4 @@ C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\Helper.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\SecureDelete.dll
 C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\En_decrypter.frmHashes.resources
+C:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\En_decrypter.frmSettings.resources

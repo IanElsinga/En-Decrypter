@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "iEySXWJhTT734ZONlFp1+wTvn1K/xEWF3nGeo+YnNdLqcNDKaVp7yWE4htUwkgkaaGZvPikb/C0eQk0UAoENMQ==",
+  "dgSpecHash": "aaxdidErfxgPrTmM21H/iW6tOvOsN+fw7WoMBgongRWcrgEhMLy1Zd0gYB4LHhTnuD2NdSg5iYe+KmqydFNPug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
+  "projectFilePath": "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jalupa\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
-    "C:\\Users\\jalupa\\.nuget\\packages\\bouncycastle.openpgp\\1.8.1.1\\bouncycastle.openpgp.1.8.1.1.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\diskdetector-net\\0.3.2\\diskdetector-net.0.3.2.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\helper-net\\0.2.0\\helper-net.0.2.0.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -32,16 +30,5 @@
     "C:\\Users\\jalupa\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'BouncyCastle 1.8.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "BouncyCastle",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

@@ -42,7 +42,7 @@ namespace En_decrypter
             this.btnDelAsk.Location = new System.Drawing.Point(202, 425);
             this.btnDelAsk.Name = "btnDelAsk";
             this.btnDelAsk.Size = new System.Drawing.Size(136, 50);
-            this.btnDelAsk.TabIndex = 0;
+            this.btnDelAsk.TabIndex = 2;
             this.btnDelAsk.Text = "delete files and folders";
             this.btnDelAsk.UseVisualStyleBackColor = true;
             this.btnDelAsk.Click += new System.EventHandler(this.btnDelAsk_Click);
@@ -57,6 +57,7 @@ namespace En_decrypter
             this.boxResponse.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.boxResponse.Size = new System.Drawing.Size(498, 108);
             this.boxResponse.TabIndex = 4;
+            this.boxResponse.TabStop = false;
             this.boxResponse.Text = "";
             // 
             // boxInput
@@ -69,7 +70,7 @@ namespace En_decrypter
             this.boxInput.Name = "boxInput";
             this.boxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxInput.Size = new System.Drawing.Size(498, 281);
-            this.boxInput.TabIndex = 3;
+            this.boxInput.TabIndex = 1;
             this.boxInput.TextChanged += new System.EventHandler(this.boxInput_TextChanged);
             this.boxInput.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxInput_DragDrop);
             this.boxInput.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxInput_DragEnter);

@@ -45,7 +45,8 @@ namespace En_decrypter
             this.boxResponse.ReadOnly = true;
             this.boxResponse.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.boxResponse.Size = new System.Drawing.Size(498, 25);
-            this.boxResponse.TabIndex = 7;
+            this.boxResponse.TabIndex = 4;
+            this.boxResponse.TabStop = false;
             this.boxResponse.Text = "";
             // 
             // boxInput
@@ -58,7 +59,7 @@ namespace En_decrypter
             this.boxInput.Name = "boxInput";
             this.boxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.boxInput.Size = new System.Drawing.Size(498, 281);
-            this.boxInput.TabIndex = 6;
+            this.boxInput.TabIndex = 2;
             this.boxInput.TextChanged += new System.EventHandler(this.boxInput_TextChanged);
             this.boxInput.DragDrop += new System.Windows.Forms.DragEventHandler(this.boxInput_DragDrop);
             this.boxInput.DragEnter += new System.Windows.Forms.DragEventHandler(this.boxInput_DragEnter);
@@ -70,7 +71,7 @@ namespace En_decrypter
             this.btnHash.Location = new System.Drawing.Point(206, 419);
             this.btnHash.Name = "btnHash";
             this.btnHash.Size = new System.Drawing.Size(136, 50);
-            this.btnHash.TabIndex = 5;
+            this.btnHash.TabIndex = 3;
             this.btnHash.Text = "Hash text";
             this.btnHash.UseVisualStyleBackColor = true;
             this.btnHash.Click += new System.EventHandler(this.btnHash_Click);
@@ -83,16 +84,11 @@ namespace En_decrypter
             "SHA512",
             "SHA256",
             "SHA1",
-            "MD5",
-            "BCrypt",
-            "Scrypt",
-            "Whirlpool",
-            "NTLM",
-            "LANMAN"});
+            "MD5"});
             this.comboHashes.Location = new System.Drawing.Point(27, 30);
             this.comboHashes.Name = "comboHashes";
             this.comboHashes.Size = new System.Drawing.Size(189, 23);
-            this.comboHashes.TabIndex = 7;
+            this.comboHashes.TabIndex = 1;
             // 
             // frmHashes
             // 
