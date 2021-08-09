@@ -7,12 +7,17 @@
 - Secure Delete files and folders
 - AES string and file Encryption and Decryption
 - PGP string and file Encryption, Signing, Decryption and Verifying
+- PGP Key creation
 
 
 # **ToDo:**
 
 Start:
 - everything
+
+Random project name Generator:
+- everything
+- ?include english, german, french, spanish
 
 Secure Delete:
 - add start as admin when needed

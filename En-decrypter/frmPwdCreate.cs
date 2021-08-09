@@ -36,19 +36,19 @@ namespace En_decrypter
             string valid = "";
             if (checkLowercase.Checked)
             {
-                valid = valid + "abcdefghijklmnopqrstuvwxyz";
+                valid += "abcdefghijklmnopqrstuvwxyz";
             }
             if (checkUppercase.Checked)
             {
-                valid = valid + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                valid += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             }
             if (checkNumbers.Checked)
             {
-                valid = valid + "1234567890";
+                valid += "1234567890";
             }
             if (checkSpecialChar.Checked)
             {
-                valid = valid + "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+                valid += "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
             }
             if (valid == "")
             {
