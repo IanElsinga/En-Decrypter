@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uZbRE3CmJMrtyHUbOIypnporXv5NrhosTFwm0IAtFNF5mgugyoeVjVRo/i3bHScQ8A0zHUCrcJ1e+H3YtvJdJQ==",
+  "dgSpecHash": "OfP77HSsuH/RaVVHBVuNmlj2RYIBQOD7sHJGA7T/a0iWO6dsgtt+J+mPzdwAkggnBztHhNIq4xq0PyglIxZ/Vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
+  "projectFilePath": "c:\\Users\\jalupa\\source\\repos\\En-decrypter\\En-decrypter\\En-decrypter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jalupa\\.nuget\\packages\\diskdetector-net\\0.3.2\\diskdetector-net.0.3.2.nupkg.sha512",
     "C:\\Users\\jalupa\\.nuget\\packages\\helper-net\\0.2.0\\helper-net.0.2.0.nupkg.sha512",
