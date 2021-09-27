@@ -35,33 +35,23 @@ namespace en_decrypter
             this.btnSecDel = new System.Windows.Forms.Button();
             this.btnPGP = new System.Windows.Forms.Button();
             this.btnAES = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.btnPwdCreate = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.profilePic = new System.Windows.Forms.PictureBox();
             this.PnlFormLoader = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.menuTitle = new System.Windows.Forms.Label();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnInvis = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(80)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(204)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.btnHashes);
             this.panel1.Controls.Add(this.btnSecDel);
             this.panel1.Controls.Add(this.btnPGP);
             this.panel1.Controls.Add(this.btnAES);
-            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnPwdCreate);
-            this.panel1.Controls.Add(this.btnStart);
-            this.panel1.Controls.Add(this.panel2);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
@@ -69,7 +59,7 @@ namespace en_decrypter
             // 
             this.btnHashes.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnHashes, "btnHashes");
-            this.btnHashes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHashes.ForeColor = System.Drawing.Color.Black;
             this.btnHashes.Name = "btnHashes";
             this.btnHashes.UseVisualStyleBackColor = true;
             this.btnHashes.Click += new System.EventHandler(this.btnHashes_Click);
@@ -78,7 +68,7 @@ namespace en_decrypter
             // 
             resources.ApplyResources(this.btnSecDel, "btnSecDel");
             this.btnSecDel.FlatAppearance.BorderSize = 0;
-            this.btnSecDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSecDel.ForeColor = System.Drawing.Color.Black;
             this.btnSecDel.Name = "btnSecDel";
             this.btnSecDel.UseVisualStyleBackColor = true;
             this.btnSecDel.Click += new System.EventHandler(this.btnSecDel_Click);
@@ -87,7 +77,7 @@ namespace en_decrypter
             // 
             this.btnPGP.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnPGP, "btnPGP");
-            this.btnPGP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPGP.ForeColor = System.Drawing.Color.Black;
             this.btnPGP.Name = "btnPGP";
             this.btnPGP.UseVisualStyleBackColor = true;
             this.btnPGP.Click += new System.EventHandler(this.btnPGP_Click);
@@ -96,57 +86,19 @@ namespace en_decrypter
             // 
             this.btnAES.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnAES, "btnAES");
-            this.btnAES.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAES.ForeColor = System.Drawing.Color.Black;
             this.btnAES.Name = "btnAES";
             this.btnAES.UseVisualStyleBackColor = true;
             this.btnAES.Click += new System.EventHandler(this.btnAES_Click);
-            // 
-            // btnSettings
-            // 
-            resources.ApplyResources(this.btnSettings, "btnSettings");
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnPwdCreate
             // 
             resources.ApplyResources(this.btnPwdCreate, "btnPwdCreate");
             this.btnPwdCreate.FlatAppearance.BorderSize = 0;
-            this.btnPwdCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPwdCreate.ForeColor = System.Drawing.Color.Black;
             this.btnPwdCreate.Name = "btnPwdCreate";
             this.btnPwdCreate.UseVisualStyleBackColor = true;
             this.btnPwdCreate.Click += new System.EventHandler(this.btnPwdCreate_Click);
-            // 
-            // btnStart
-            // 
-            resources.ApplyResources(this.btnStart, "btnStart");
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnStart.Name = "btnStart";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblUsername);
-            this.panel2.Controls.Add(this.profilePic);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // lblUsername
-            // 
-            resources.ApplyResources(this.lblUsername, "lblUsername");
-            this.lblUsername.Name = "lblUsername";
-            // 
-            // profilePic
-            // 
-            resources.ApplyResources(this.profilePic, "profilePic");
-            this.profilePic.Name = "profilePic";
-            this.profilePic.TabStop = false;
-            this.profilePic.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // PnlFormLoader
             // 
@@ -191,7 +143,7 @@ namespace en_decrypter
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.btnInvis);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.menuTitle);
@@ -204,8 +156,6 @@ namespace en_decrypter
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.profilePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,10 +166,8 @@ namespace en_decrypter
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox profilePic;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btn;
         private System.Windows.Forms.Button btnAES;
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Panel PnlFormLoader;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label menuTitle;

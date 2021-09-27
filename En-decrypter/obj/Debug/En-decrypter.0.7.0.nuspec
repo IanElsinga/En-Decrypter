@@ -4,7 +4,6 @@
     <id>En-decrypter</id>
     <version>0.7.0</version>
     <authors>En-decrypter</authors>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package Description</description>
     <copyright>jalupa</copyright>
     <dependencies>
@@ -21,9 +20,9 @@
     </frameworkReferences>
   </metadata>
   <files>
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\es-BZ\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\es-BZ\En-decrypter.resources.dll" />
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\obj\Debug\net5.0-windows\fo-DK\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\fo-DK\En-decrypter.resources.dll" />
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\En-decrypter.runtimeconfig.json" target="lib\net5.0-windows7.0\En-decrypter.runtimeconfig.json" />
-    <file src="c:\Users\jalupa\source\repos\En-decrypter\En-decrypter\bin\Debug\net5.0-windows\En-decrypter.dll" target="lib\net5.0-windows7.0\En-decrypter.dll" />
+    <file src="D:\GitHub\En-Decrypter\En-decrypter\obj\Debug\net5.0-windows\es-BZ\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\es-BZ\En-decrypter.resources.dll" />
+    <file src="D:\GitHub\En-Decrypter\En-decrypter\obj\Debug\net5.0-windows\fo-DK\En-decrypter.resources.dll" target="lib\net5.0-windows7.0\fo-DK\En-decrypter.resources.dll" />
+    <file src="D:\GitHub\En-Decrypter\En-decrypter\bin\Debug\net5.0-windows\En-decrypter.runtimeconfig.json" target="lib\net5.0-windows7.0\En-decrypter.runtimeconfig.json" />
+    <file src="D:\GitHub\En-Decrypter\En-decrypter\bin\Debug\net5.0-windows\En-decrypter.dll" target="lib\net5.0-windows7.0\En-decrypter.dll" />
   </files>
 </package>

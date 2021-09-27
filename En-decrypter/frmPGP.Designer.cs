@@ -139,7 +139,7 @@ namespace En_decrypter
             // boxEnc
             // 
             this.boxEnc.AllowDrop = true;
-            this.boxEnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.boxEnc.BackColor = System.Drawing.Color.White;
             this.boxEnc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxEnc.Location = new System.Drawing.Point(22, 337);
             this.boxEnc.Multiline = true;
@@ -162,7 +162,7 @@ namespace En_decrypter
             // boxPlain
             // 
             this.boxPlain.AllowDrop = true;
-            this.boxPlain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.boxPlain.BackColor = System.Drawing.Color.White;
             this.boxPlain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.boxPlain.Location = new System.Drawing.Point(22, 179);
             this.boxPlain.Multiline = true;
@@ -221,7 +221,7 @@ namespace En_decrypter
             // 
             // btnCopyPlain
             // 
-            this.btnCopyPlain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.btnCopyPlain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCopyPlain.FlatAppearance.BorderSize = 0;
             this.btnCopyPlain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopyPlain.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -236,7 +236,7 @@ namespace En_decrypter
             // 
             // btnCopyEnc
             // 
-            this.btnCopyEnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.btnCopyEnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCopyEnc.FlatAppearance.BorderSize = 0;
             this.btnCopyEnc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopyEnc.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -251,7 +251,7 @@ namespace En_decrypter
             // 
             // btnPastePlain
             // 
-            this.btnPastePlain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.btnPastePlain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPastePlain.FlatAppearance.BorderSize = 0;
             this.btnPastePlain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPastePlain.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -266,7 +266,7 @@ namespace En_decrypter
             // 
             // btnPasteEnc
             // 
-            this.btnPasteEnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(70)))), ((int)(((byte)(0)))));
+            this.btnPasteEnc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPasteEnc.FlatAppearance.BorderSize = 0;
             this.btnPasteEnc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPasteEnc.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -324,7 +324,7 @@ namespace En_decrypter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(552, 487);
             this.Controls.Add(this.btnCreateKeypair);
             this.Controls.Add(this.btnKeyFile);
