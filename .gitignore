@@ -441,4 +441,4 @@ FodyWeavers.xsd
 En-decrypter/bin/
 En-decrypter/obj/
 En-decrypter/*.asc
-.vs/En-decrypter/v16/.suo
+.vs/En-decrypter/v16/
